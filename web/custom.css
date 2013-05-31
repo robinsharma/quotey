@@ -1,0 +1,36 @@
+/*
+By: Robin Sharma
+Date: May 30, 2013
+
+Custom CSS for the Quotey Card!
+
+Copyright (C) Robin Sharma
+*/
+
+.app-button {
+	width: 10%;
+}
+
+.app-button.right {
+	background-image: url(../img/kik_white.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto 30px;
+}
+
+.app-button.right.active {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto 30px;
+
+	background-color: #191919;
+	background-image: url(../img/kik_white.png);
+}
+
+
+
+/*
+.app-button.right{right:0;text-align:center;background-image:url(../img/kik_white.png);
+	background-position:center;background-repeat:no-repeat;background-size:auto 30px
+
+*/
