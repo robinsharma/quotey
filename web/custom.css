@@ -7,18 +7,18 @@ Custom CSS for the Quotey Card!
 Copyright (C) Robin Sharma
 */
 
-.app-button {
+.app-button.kik {
 	width: 10%;
 }
 
-.app-button.right {
+.app-button.kik.right {
 	background-image: url(../img/kik_white.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: auto 30px;
 }
 
-.app-button.right.active {
+.app-button.kik.right.active {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: auto 30px;
