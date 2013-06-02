@@ -29,10 +29,10 @@ App.populator('home', function (page) {
   } 
 
   kik_button.click( function () {
-    quote_div.html("<b>test</b>");
     cards.kik.send({
       title : 'Quote:' ,
-      text  : $(quote) ,
+      text  : quote ,
+      pic   : "img/quotey_icon.png"
     });
   });
 
