@@ -68,11 +68,23 @@ Copyright (C) Robin Sharma
 	color: #DDD;
 }
 
+.app-ios .quote-text {
+	font-family: "Helvetica Neue";
+	font-size: 36px;
+	font-weight: 100;
+}
+
 .about-text {
 	padding: 10px;
 	font-size: 32px;
 	font-weight: 100;
 	color: #333;
+}
+
+.app-ios .about-text {
+	font-family: "Helvetica Neue";
+	font-weight: 100;
+	font-size: 25px;
 }
 
 /*
