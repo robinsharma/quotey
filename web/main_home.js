@@ -31,8 +31,8 @@ App.populator('home', function (page) {
   kik_button.click( function () {
     quote_div.html("<b>test</b>");
     cards.kik.send({
-      title : 'Incoming Message!' ,
-      text  : 'This will self-destruct 3 seconds after opening.' ,
+      title : 'Quote:' ,
+      text  : $(quote) ,
     });
   });
 
