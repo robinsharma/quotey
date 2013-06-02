@@ -4,14 +4,14 @@ App.populator('home', function (page) {
   var x = $(page);
   var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms";
   // find the location on the page where the quote will go
-  var quote_div = x.find('.quote-text');
+  var quote_div = $(x).find('.quote-text');
 
   // Default, placeholder quote.
   quote_div.html(quote);
   //quote_div.html("You only live once, but if you do it right, once is enough. - Mae West");
 
   //Cause app to reload one title bar pressed
-  x.find('.app-title').on('click', function() {
+  $(x).find('.app-title').on('click', function() {
     App.load('home', 'fade');
   });
 
@@ -29,6 +29,7 @@ App.populator('home', function (page) {
     quote_div.html(quote);
   }
 
+/*
   x.find("app-button.kik.right").on("click", function () {
     var messageText = quote;
     cards.kik.send({
@@ -37,7 +38,7 @@ App.populator('home', function (page) {
       data  : { text : messageText }
     })
   });
-
+*/
 });
 
 App.populator('About', function (page) {
