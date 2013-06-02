@@ -21,16 +21,6 @@ App.populator('home', function (page) {
 
   function loadquote(data) {
     x.find('.app-section').html(data[0].description);
-    
-    x.find('.app-button.kik.right').click(function(){
-      cards.kik.send({
-        title     : 'Message title'        ,
-        text      : 'Message body'         ,
-        big       : true                   , // optional
-        noForward : true                   , // optional
-        //linkData  : JSON.stringify(data[p])
-      });
-    });
   }
 
 });
