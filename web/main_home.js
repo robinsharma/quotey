@@ -7,7 +7,7 @@ App.populator('home', function (page) {
   var quote_div = x.find('.quote-text');
 
   // Default, placeholder quote.
-  quote_div.text("\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms")
+  quote_div.html("\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms");
   //quote_div.html("You only live once, but if you do it right, once is enough. - Mae West");
 
   //Cause app to reload one title bar pressed
@@ -19,13 +19,13 @@ App.populator('home', function (page) {
   cards.ready(function (){
     zAPI.getData(function(meta, quote){
       if(quote){
-        loadquote(quote)
+        loadquote(quote);
       }
     });
   });
 
   function loadquote(data) {
-    quote_div.text(data[0].description);
+    quote_div.html(data[0].description);
   }
 
 });
