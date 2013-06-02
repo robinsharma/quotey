@@ -36,6 +36,10 @@ Copyright (C) Robin Sharma
 	color: #DDD;
 }
 
+.app-android .app-topbar.main {
+	height: 48px
+}
+
 .app-title.main {
 	margin: 0 auto;
 	padding-left: 10px;
