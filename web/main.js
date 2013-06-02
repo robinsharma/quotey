@@ -30,7 +30,7 @@ App.populator('home', function (page) {
 
 
     var slideViewer = new SlideViewer(wrapper, source,{startAt: 0, length: 30});
-    p.find(".app-button.right").click(function(){
+    p.find(".app-button.kik.right").click(function(){
                k = slideViewer.page();
                
                cards.kik.send({
