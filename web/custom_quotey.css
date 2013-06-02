@@ -7,10 +7,6 @@ Custom CSS for the Quotey Card!
 Copyright (C) Robin Sharma
 */
 
-.app-android {
-	font-size: 32px;
-}
-
 .app-button.kik {
 	width: 10%;
 }
@@ -56,13 +52,13 @@ Copyright (C) Robin Sharma
 
 .quote-section{
 	font-family: "Helvetica Neue",'Roboto', sans-serif;
-	background: white;
+	background: #222;
 }
 .quote-text {
 	padding: 10px;
 	font-size: 40px;
 	font-weight: 100;
-	color: #333;
+	color: #AAA;
 }
 
 /*
