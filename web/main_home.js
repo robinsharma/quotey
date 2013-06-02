@@ -1,7 +1,7 @@
 App.populator('home', function (page) {
 
   var x = $(page); // set current page to variable x
-  var kik_button = $(x).find('.app-button.kik.right');
+  var kik_button = $(x).find('.app-button.kik.right'); // Find location of kik button
   var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
   var quote_div = $(x).find('.quote-text');
   
@@ -35,9 +35,6 @@ App.populator('home', function (page) {
       });
     });
   } 
-
-
-
 });
 
 App.populator('About', function (page) {

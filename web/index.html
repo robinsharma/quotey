@@ -51,5 +51,15 @@
     <script src="app.js"></script>
     <script src="main_home.js"></script>
     <script src="zerver/zAPI.js"></script>
+    <script>
+
+      if(cards.browser && cards.browser.linkData) {
+        App.load('home', cards.browser.linkData);
+       }
+       else {
+        App.load('home');
+       }
+    
+    </script>
   </body>
 </html>
