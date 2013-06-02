@@ -27,13 +27,18 @@ Copyright (C) Robin Sharma
 	background-image: url(../img/kik_white.png);
 }
 
-h1.main {
-	font-family: 'Open Sans',sans-serif;
-	font-weight: 300;
-	position: absolute;
-	top: -22px;
-	height: 85px;
-	padding-left: 3px;
+.app-button.back.right {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto 30px;
+}
+
+.app-button.back.right.active {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto 30px;
+
+	background-color: #191919;
 }
 
 .app-topbar.main {
@@ -71,7 +76,7 @@ h1.main {
 	/*color: #666;*/
 }
 
-
+/*
 .titleBarContainer{
 	position: relative;
 	text-align: center;
@@ -98,3 +103,5 @@ h1.main {
     padding-right: 5px;
     padding-left: 5px;
 }
+
+*/
