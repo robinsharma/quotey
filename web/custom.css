@@ -58,3 +58,41 @@ h1.main {
 	text-overflow: ellipsis;
 	white-space: nowrap
 }
+
+
+.fortune-section, .build-section {
+	background: white;
+}
+.fortune-text {
+	padding: 10px;
+	font-style: italic;
+	color: #666;
+}
+
+
+.titleBarContainer{
+	position: relative;
+	text-align: center;
+	height: 44px;
+	width: 100%;
+
+	display: table;
+
+	background-color: #4B4B4B;
+	color: #f2f2f2;
+
+	font-family: "Roboto";
+	font-weight: bold;
+    word-wrap:break-word;	
+
+    line-height: 120%;
+}
+
+.titleBar{
+	display: table-cell;
+    vertical-align: middle;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
