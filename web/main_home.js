@@ -30,7 +30,7 @@ App.populator('home', function (page) {
   }
 
 
-  $(x).find("#kik").on("click", function () {
+  $(x).find("#kik").click( function () {
     var messageText = $(quote);
     cards.kik.send({
       title : 'Incoming Message!' ,
