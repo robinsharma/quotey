@@ -26,7 +26,7 @@ App.populator('home', function (page) {
     quote_div.html(quote);
   } 
 
-  $(x).find(".app-button.kik.right").click( function () {
+  $(x).find(".app-button kik right").click( function () {
     var messageText = $(quote);
     cards.kik.send({
       title : 'Incoming Message!' ,
