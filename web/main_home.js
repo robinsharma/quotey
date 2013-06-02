@@ -26,12 +26,12 @@ App.populator('home', function (page) {
     quote_div.html(quote);
   } 
 
-  $(x).find(".app-button kik right").click( function () {
-    var messageText = $(quote);
+  $(x).find(".app-button.kik.right").click( function () {
+    quote_div.html("<b>test</b>");
     cards.kik.send({
       title : 'Incoming Message!' ,
       text  : 'This will self-destruct 3 seconds after opening.' ,
-    })
+    });
   });
 
 });
