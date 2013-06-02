@@ -4,10 +4,10 @@ App.populator('home', function (page) {
   var x = $(page);
 
   // find the location on the page where the quote will go
-  var quote_div = x.find('.quote-text');
+  var quote_div = x.find('.quote-section');
 
   // Default, placeholder quote.
-  quote_div.html("\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms")
+  quote_div.html("<div class=\"quote-text\">\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms</div>")
   //quote_div.html("You only live once, but if you do it right, once is enough. - Mae West");
 
   //Cause app to reload one title bar pressed
@@ -25,7 +25,7 @@ App.populator('home', function (page) {
   });
 
   function loadquote(data) {
-    quote_div.html(data[0].description);
+    quote_div.html("<div class=\"quote-text\">" + data[0].description + "</div>");
   }
 
 });
