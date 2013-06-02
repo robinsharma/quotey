@@ -49,8 +49,20 @@ Copyright (C) Robin Sharma
 	white-space: nowrap
 }
 
+.app-sec.quote {
+	background: #222;
+	border: 0;
+	border-bottom: 1px solid #DDD;
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 0 3px rgba(0,0,0,0.1);
+	box-shadow: 0 0 3px rgba(0,0,0,0.1);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	overflow: hidden
+}
 
-.app-section .app-android .quote-section{
+.quote-section{
 	font-family: "Helvetica Neue",'Roboto', sans-serif;
 	background: #222;
 }
