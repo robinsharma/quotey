@@ -60,7 +60,7 @@ Copyright (C) Robin Sharma
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
-	overflow: hidden
+	overflow: hidden;
 	font-family: "Helvetica Neue",'Roboto', sans-serif;
 	background-color: #222;
 }
@@ -73,7 +73,7 @@ Copyright (C) Robin Sharma
 
 .about-text {
 	padding: 10px;
-	font-size: 32px;
+	font-size: 25px;
 	font-weight: 100;
 	color: #333;
 }
