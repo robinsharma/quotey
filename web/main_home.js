@@ -26,6 +26,8 @@ App.populator('home', function (page) {
   function loadquote(data) {
     quote = data[0].description;
     quote_div.html(quote);
+
+    // Handle kik button
     kik_button.click( function () {
       cards.kik.send({
         title : 'Quote:' ,
@@ -35,7 +37,18 @@ App.populator('home', function (page) {
       });
     });
   } 
+
+
+try {
+  if(!cards.kik){
+    kik_button.hide();
+  }
+} catch (e) {
+  kik_button.hide();
+}
 });
+
+
 
 App.populator('About', function (page) {
   // put stuff here
