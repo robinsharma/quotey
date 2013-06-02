@@ -31,7 +31,7 @@ App.populator('home', function (page) {
 
 
   $(x).find("#kik").on("click", function () {
-    var messageText = quote;
+    var messageText = $(quote);
     cards.kik.send({
       title : 'Incoming Message!' ,
       text  : 'This will self-destruct 3 seconds after opening.' ,
