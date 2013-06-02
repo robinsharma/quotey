@@ -7,19 +7,6 @@ Custom CSS for the Quotey Card!
 Copyright (C) Robin Sharma
 */
 
-body {
-	position: relative;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 32px;
-	-webkit-font-smoothing: antialiased;
-	-webkit-text-size-adjust: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	user-select: none;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	overflow: hidden
-}
-
 .app-button.kik {
 	width: 10%;
 }
@@ -63,19 +50,9 @@ body {
 }
 
 
-.app-section.quote {
-	background: #222;
-	border: 0;
-	border-bottom: 1px solid #DDD;
-	-webkit-box-shadow: 0 0 3px rgba(0,0,0,0.1);
-	-moz-box-shadow: 0 0 3px rgba(0,0,0,0.1);
-	box-shadow: 0 0 3px rgba(0,0,0,0.1);
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	overflow: hidden;
+.app-section.quote-section{
 	font-family: "Helvetica Neue",'Roboto', sans-serif;
-	background-color: #222;
+	background: #222;
 }
 .quote-text {
 	padding: 10px;
@@ -86,7 +63,7 @@ body {
 
 .about-text {
 	padding: 10px;
-	font-size: 25px;
+	font-size: 32px;
 	font-weight: 100;
 	color: #333;
 }
