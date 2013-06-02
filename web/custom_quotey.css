@@ -27,7 +27,7 @@ Copyright (C) Robin Sharma
 	background-image: url(../img/kik_white.png);
 }
 
-.app-ios .app-topbar.main {
+.app-topbar.main {
 	z-index: 3000;
 	position: relative;
 	height: 44px;
@@ -37,12 +37,7 @@ Copyright (C) Robin Sharma
 }
 
 .app-android .app-topbar.main {
-	z-index: 3000;
-	position: relative;
-	height: 48px;
-	width: 100%;
-	background: #000;
-	color: #DDD;
+	height: 55px
 }
 
 .app-title.main {
