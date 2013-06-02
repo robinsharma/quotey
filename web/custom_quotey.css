@@ -72,6 +72,11 @@ Copyright (C) Robin Sharma
 	color: #DDD;
 }
 
+
+.app-section.quote{
+	font-family: "Helvetica Neue",'Roboto', sans-serif;
+	background: #222;
+}
 /*
 .titleBarContainer{
 	position: relative;
