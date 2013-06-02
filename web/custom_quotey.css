@@ -1,0 +1,93 @@
+/*
+By: Robin Sharma
+Date: May 30, 2013
+
+Custom CSS for the Quotey Card!
+
+Copyright (C) Robin Sharma
+*/
+
+.app-button.kik {
+	width: 10%;
+}
+
+.app-button.kik.right {
+	background-image: url(../img/kik_white.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto 30px;
+}
+
+.app-button.kik.right.active {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto 30px;
+
+	background-color: #191919;
+	background-image: url(../img/kik_white.png);
+}
+
+.app-topbar.main {
+	z-index: 3000;
+	position: relative;
+	height: 44px;
+	width: 100%;
+	background: #000;
+	color: #DDD;
+}
+
+.app-title.main {
+	margin: 0 auto;
+	padding-left: 10px;
+	height: 100%;
+	width: 100%;
+	font-weight: 200;
+	font-size: 25px;
+	line-height: 44px;
+	text-align: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap
+}
+
+
+.quote-section{
+	background: white;
+}
+.quote-text {
+	padding: 10px;
+	font-size: 25px;
+	font-weight: 300;
+	color: #333;
+	/*color: #666;*/
+}
+
+/*
+.titleBarContainer{
+	position: relative;
+	text-align: center;
+	height: 44px;
+	width: 100%;
+
+	display: table;
+
+	background-color: #4B4B4B;
+	color: #f2f2f2;
+
+	font-family: "Roboto";
+	font-weight: bold;
+    word-wrap:break-word;	
+
+    line-height: 120%;
+}
+
+.titleBar{
+	display: table-cell;
+    vertical-align: middle;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+*/
