@@ -26,15 +26,17 @@ App.populator('home', function (page) {
   function loadquote(data) {
     quote = data[0].description;
     quote_div.html(quote);
+    kik_button.click( function () {
+      cards.kik.send({
+        title : 'Quote:' ,
+        text  : quote ,
+        pic   : "img/quotey_icon.png" ,
+        linkData: JSON.stringify(data[0])
+      });
+    });
   } 
 
-  kik_button.click( function () {
-    cards.kik.send({
-      title : 'Quote:' ,
-      text  : quote ,
-      pic   : "img/quotey_icon.png"
-    });
-  });
+
 
 });
 
