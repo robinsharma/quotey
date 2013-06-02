@@ -46,7 +46,6 @@ Copyright (C) Robin Sharma
 	line-height: 44px;
 	text-align: left;
 	overflow: hidden;
-	text-overflow: ellipsis;
 	white-space: nowrap
 }
 
