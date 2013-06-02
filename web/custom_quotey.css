@@ -61,6 +61,17 @@ Copyright (C) Robin Sharma
 	color: #DDD;
 }
 
+.app-android .quote-section{
+	font-family: "Helvetica Neue",'Roboto', sans-serif;
+	background: #222;
+}
+.app-android .quote-text {
+	padding: 10px;
+	font-size: 40px;
+	font-weight: 100;
+	color: #DDD;
+}
+
 /*
 .titleBarContainer{
 	position: relative;
