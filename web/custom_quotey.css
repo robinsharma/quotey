@@ -27,11 +27,6 @@ Copyright (C) Robin Sharma
 	background-image: url(../img/kik_white.png);
 }
 
-.app-android .app-topbar .app-title {
-	line-height: 48px;
-	font-size: 32px;
-}
-
 .app-topbar.main {
 	z-index: 3000;
 	position: relative;
@@ -56,16 +51,12 @@ Copyright (C) Robin Sharma
 
 
 .quote-section{
-	font-family: 'Roboto', sans-serif;
+	font-family: "Helvetica Neue",'Roboto', sans-serif;
 	background: white;
-}
-
-.app-android .quote-section {
-	font-size: 48px;
 }
 .quote-text {
 	padding: 10px;
-	font-size: 48px;
+	font-size: 40px;
 	font-weight: 100;
 	color: #333;
 	/*color: #666;*/
