@@ -1,13 +1,9 @@
 App.populator('home', function (page) {
 
-  // set current page to variable x
-  var x = $(page);
-  var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms";
-  // find the location on the page where the quote will go
+  var x = $(page); // set current page to variable x
+  var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
   var quote_div = $(x).find('.quote-text');
-
-  // Default, placeholder quote.
-  quote_div.html(quote);
+  quote_div.html(quote); // Default, placeholder quote.
   //quote_div.html("You only live once, but if you do it right, once is enough. - Mae West");
 
   //Cause app to reload one title bar pressed
@@ -24,9 +20,13 @@ App.populator('home', function (page) {
     });
   });
 
+  // Load the quote into quote-text
   function loadquote(data) {
     quote = data[0].description;
     quote_div.html(quote);
+  } 
+
+/*
     $(x).find(".app-button.kik.right").click( function () {
       var messageText = $(quote);
       cards.kik.send({
@@ -34,7 +34,7 @@ App.populator('home', function (page) {
         text  : 'This will self-destruct 3 seconds after opening.' ,
       })
     });
-  } 
+*/
 
 });
 
