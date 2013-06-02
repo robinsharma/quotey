@@ -35,8 +35,7 @@ App.populator('home', function (page) {
       title : 'Incoming Message!' ,
       text  : 'This will self-destruct 3 seconds after opening.' ,
       data  : { text : messageText }
-    });
-    return false;
+    })
   });
 
 });
