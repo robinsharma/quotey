@@ -4,7 +4,7 @@ App.populator('home', function (page) {
   var x = $(page);
 
   // find the location on the page where the quote will go
-  var quote_div = x.find('.fortune-text');
+  var quote_div = x.find('.quote-text');
 
   // Default, placeholder quote.
   quote_div.html("\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms")
