@@ -29,8 +29,8 @@ App.populator('home', function (page) {
     quote_div.html(quote);
   }
 
-/*
-  x.find("app-button.kik.right").on("click", function () {
+
+  $(x).find("app-button.kik.right").on("click", function () {
     var messageText = quote;
     cards.kik.send({
       title : 'Incoming Message!' ,
@@ -38,7 +38,7 @@ App.populator('home', function (page) {
       data  : { text : messageText }
     })
   });
-*/
+
 });
 
 App.populator('About', function (page) {
