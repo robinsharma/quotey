@@ -50,7 +50,7 @@ Copyright (C) Robin Sharma
 }
 
 
-.app-page .quote-section{
+.quote-section{
 	font-family: "Helvetica Neue",'Roboto', sans-serif;
 	background: #222;
 }
@@ -61,22 +61,13 @@ Copyright (C) Robin Sharma
 	color: #DDD;
 }
 
-.app-android .quote-section{
-	font-family: "Helvetica Neue",'Roboto', sans-serif;
-	background: #222;
-}
-.app-android .quote-text {
+.about-text {
 	padding: 10px;
 	font-size: 40px;
 	font-weight: 100;
-	color: #DDD;
+	color: #333;
 }
 
-
-.app-page .app-section.quote{
-	font-family: "Helvetica Neue",'Roboto', sans-serif;
-	background: #222;
-}
 /*
 .titleBarContainer{
 	position: relative;
