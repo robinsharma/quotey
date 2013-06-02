@@ -201,7 +201,46 @@ body {
 .app-loaded .app-page {
 	display: block
 }
-
+.app-topbar {
+	z-index: 3000;
+	position: relative;
+	height: 44px;
+	width: 100%;
+	background: #000;
+	color: #FFF
+}
+.app-android .app-topbar {
+	height: 48px
+}
+.app-topbar .app-button {
+	position: absolute;
+	top: 0;
+	padding: 0 8px;
+	height: 100%;
+	line-height: 44px
+}
+.app-android .app-topbar .app-button {
+	line-height: 48px
+}
+.app-topbar .app-button.left {
+	left: 0
+}
+.app-topbar .app-button.right {
+	right: 0
+}
+.app-topbar .app-title {
+	margin: 0 auto;
+	height: 100%;
+	width: 100%;
+	line-height: 44px;
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap
+}
+.app-android .app-topbar .app-title {
+	line-height: 48px
+}
 .app-content {
 	z-index: 2000;
 	position: relative;
@@ -324,6 +363,32 @@ textarea.app-input {
 .app-input textarea {
 	height: 60px
 }
+.app-topbar {
+	background: #222;
+	color: #DDD;
+	font-weight: bold
+}
+.app-android .app-topbar {
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5), inset 0 1px 0 #2b2b2b, inset 0 -2px 0 #1b1b1b;
+	-moz-box-shadow: 0 0 5px rgba(0,0,0,0.5), inset 0 1px 0 #2b2b2b, inset 0 -2px 0 #1b1b1b;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5), inset 0 1px 0 #2b2b2b, inset 0 -2px 0 #1b1b1b
+}
+.app-ios .app-topbar {
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#525252),to(#1f1e1f));
+	background-image: -webkit-linear-gradient(#525252,#1f1e1f);
+	background-image: -moz-linear-gradient(#525252,#1f1e1f);
+	background-image: -ms-linear-gradient(#525252,#1f1e1f);
+	background-image: -o-linear-gradient(#525252,#1f1e1f);
+	background-image: linear-gradient(#525252,#1f1e1f);
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5), inset 0 1px 0 #797979, inset 0 -1px 0 #333;
+	-moz-box-shadow: 0 0 5px rgba(0,0,0,0.5), inset 0 1px 0 #797979, inset 0 -1px 0 #333;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5), inset 0 1px 0 #797979, inset 0 -1px 0 #333;
+	color: #EEE;
+	text-shadow: 0 -1px 0 #1d1e1e
+}
+.app-title {
+	font-size: 20px
+}
 .app-android .app-title {
 	float: left;
 	padding: 0 12px 0 24px;
@@ -350,8 +415,41 @@ textarea.app-input {
 	background-size: 8px 14px;
 	color: transparent
 }
-
-
+.app-android .app-topbar .app-button[data-back].active {
+	background-color: transparent
+}
+.app-ios .app-topbar .app-button {
+	margin: 7px 5px;
+	padding: 0 10px;
+	height: 28px;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#585858),to(#1b1b1b));
+	background-image: -webkit-linear-gradient(top,#585858,#1b1b1b);
+	background-image: -moz-linear-gradient(top,#585858,#1b1b1b);
+	background-image: -ms-linear-gradient(top,#585858,#1b1b1b);
+	background-image: -o-linear-gradient(top,#585858,#1b1b1b);
+	background-image: linear-gradient(top,#585858,#1b1b1b);
+	border: 1px solid #201f20;
+	-webkit-box-shadow: 0 1px 1px rgba(255,255,255,0.1), inset 0 0 2px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 1px 1px rgba(255,255,255,0.1), inset 0 0 2px rgba(0,0,0,0.3);
+	box-shadow: 0 1px 1px rgba(255,255,255,0.1), inset 0 0 2px rgba(0,0,0,0.3);
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	font-size: 14px;
+	line-height: 28px
+}
+.app-ios .app-topbar .app-button.active {
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#2f2f2f),to(#0d0d0d));
+	background-image: -webkit-linear-gradient(top,#2f2f2f,#0d0d0d);
+	background-image: -moz-linear-gradient(top,#2f2f2f,#0d0d0d);
+	background-image: -ms-linear-gradient(top,#2f2f2f,#0d0d0d);
+	background-image: -o-linear-gradient(top,#2f2f2f,#0d0d0d);
+	background-image: linear-gradient(top,#2f2f2f,#0d0d0d);
+	-webkit-box-shadow: 0 1px 1px rgba(255,255,255,0.1), inset 0 0 3px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0 1px 1px rgba(255,255,255,0.1), inset 0 0 3px rgba(0,0,0,0.4);
+	box-shadow: 0 1px 1px rgba(255,255,255,0.1), inset 0 0 3px rgba(0,0,0,0.4);
+	color: #c8c8c8
+}
 .app-page, .app-content {
 	background: #EEE;
 	color: #696969
@@ -360,7 +458,7 @@ textarea.app-input {
 	border-color: #EEE
 }
 .app-section {
-	background: #DDD;
+	background: #FFF;
 	border: 0;
 	border-bottom: 1px solid #DDD;
 	-webkit-box-shadow: 0 0 3px rgba(0,0,0,0.1);
