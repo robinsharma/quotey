@@ -60,13 +60,15 @@ h1.main {
 }
 
 
-.fortune-section, .build-section {
+.fortune-section{
 	background: white;
 }
 .fortune-text {
 	padding: 10px;
-	font-style: italic;
-	color: #666;
+	font-size: 25px;
+	font-weight: 300;
+	color: #333;
+	/*color: #666;*/
 }
 
 
