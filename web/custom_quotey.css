@@ -51,6 +51,16 @@ Copyright (C) Robin Sharma
 
 
 .app-section .quote-section{
+	background: #222;
+	border: 0;
+	border-bottom: 1px solid #DDD;
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 0 3px rgba(0,0,0,0.1);
+	box-shadow: 0 0 3px rgba(0,0,0,0.1);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	overflow: hidden
 	font-family: "Helvetica Neue",'Roboto', sans-serif;
 	background-color: #222;
 }
