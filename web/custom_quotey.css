@@ -61,7 +61,7 @@ Copyright (C) Robin Sharma
 	color: #DDD;
 }
 
-.about-text {
+div.about-text {
 	padding: 10px;
 	font-size: 32px;
 	font-weight: 100;
