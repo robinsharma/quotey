@@ -15,6 +15,7 @@ App.populator('home', function (page) {
     App.load('home', 'fade');
   });
 
+  // Acquire data from feed.
   cards.ready(function (){
     zAPI.getData(function(meta, quote){
       if(quote){
