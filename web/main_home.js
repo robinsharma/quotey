@@ -26,7 +26,7 @@ App.populator('home', function (page) {
   function loadquote(q_data) {
     try { // try to run card stuff
       if (cards.kik.message) {
-        quote = cards.kik.message.data[0].description;
+        quote = cards.kik.message.data.description;
         quote_div.html(quote);
         if (cards.kik.returnToConversation) {
           // Card was launched by a conversation
@@ -39,7 +39,7 @@ App.populator('home', function (page) {
       }
     } catch (e) { // catch dat shit if it ain't workin (quotey not opened in kik)
       quote = q_data[0].description;
-      quote_div.html("test");
+      quote_div.html("error tell robin about this!");
     }
     /*
     if (cards.kik.message) {
@@ -63,7 +63,7 @@ App.populator('home', function (page) {
         title : 'Quote:' ,
         text  : quote ,
         pic   : "img/quotey_icon.png" ,
-        data  : q_data
+        data  : q_data[0]
       });
     });
   } 
