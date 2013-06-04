@@ -70,7 +70,7 @@ App.populator('home', function (page) {
     });
   } 
 
-  try _{
+  try {
     if (cards.kik.returnToConversation) {
       // Card was launched by a conversation
       cards.kik.returnToConversation(); // return to conversation
