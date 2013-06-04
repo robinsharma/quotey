@@ -26,7 +26,7 @@ App.populator('home', function (page) {
   function loadquote(q_data) {
     try { // try to run card stuff
       if (cards.kik.message) {
-        quote = cards.kik.message.data[0].description;
+        quote = cards.kik.message.text;
         quote_div.html(quote);
         if (cards.kik.returnToConversation) {
           // Card was launched by a conversation
@@ -39,7 +39,7 @@ App.populator('home', function (page) {
       }
     } catch (e) { // catch dat shit if it ain't workin (quotey not opened in kik)
       quote = q_data[0].description;
-      quote_div.html("error tell robin about this! Unless you're opening this from outside of kik, if that's the case, hold on I will fix this as soon as I know wtf is going on...!");
+      quote_div.html("error tell robin");
     }
     /*
     if (cards.kik.message) {
