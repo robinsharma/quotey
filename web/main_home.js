@@ -27,7 +27,8 @@ App.populator('home', function (page) {
     try { // try to run card stuff
       if (cards.kik.message) {
         data = cards.kik.message.linkData;
-        
+        quote = data[0].description;
+        quote_div.html(quote);
         if (cards.kik.returnToConversation) {
           // Card was launched by a conversation
           cards.kik.returnToConversation(); // return to conversation
