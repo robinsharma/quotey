@@ -81,6 +81,10 @@ Copyright (C) Robin Sharma
 	font-weight: 300;
 }
 
+.app-android .quote-text {
+	font-family: "Roboto";
+}
+
 .about-text {
 	padding: 10px;
 	font-size: 32px;

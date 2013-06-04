@@ -9,7 +9,7 @@ App.populator('home', function (page) {
   //quote_div.html("You only live once, but if you do it right, once is enough. - Mae West");
   
   //Cause app to reload one title bar pressed
-  $(x).find('.app-title').on('click', function() {
+  $(x).find('#next_quote').on('click', function() {
     App.load('home', 'fade');
   });
 
@@ -24,8 +24,38 @@ App.populator('home', function (page) {
 
   // Load the quote into quote-text
   function loadquote(data) {
-    quote = data[0].description;
-    quote_div.html(quote);
+    try { // try to run card stuff
+      if (cards.kik.message) {
+        data = cards.kik.message.linkData;
+        
+        if (cards.kik.returnToConversation) {
+          // Card was launched by a conversation
+          cards.kik.returnToConversation(); // return to conversation
+        }
+      }
+      else {
+        quote = data[0].description;
+        quote_div.html(quote);
+      }
+    } catch (e) { // catch dat shit if it ain't workin (quotey not opened in kik)
+      quote = data[0].description;
+      quote_div.html(quote);
+    }
+    /*
+    if (cards.kik.message) {
+      data = cards.kik.message.linkData;
+      quote = data[0].description;
+      quote_div.html(quote);
+      if (cards.kik.returnToConversation) {
+        // Card was launched by a conversation
+        cards.kik.returnToConversation(); // return to conversation
+      }
+    }
+    else {
+      quote = data[0].description;
+      quote_div.html(quote);
+    }
+    */
 
     // Handle kik button
     kik_button.click( function () {
@@ -33,7 +63,6 @@ App.populator('home', function (page) {
         title : 'Quote:' ,
         text  : quote ,
         pic   : "img/quotey_icon.png" ,
-        big   : true ,
         linkData: data
       });
     });
