@@ -28,10 +28,12 @@ App.populator('home', function (page) {
       if (cards.kik.message) {
         quote = cards.kik.message.text;
         quote_div.html(quote);
+        /*
         if (cards.kik.returnToConversation) {
           // Card was launched by a conversation
           cards.kik.returnToConversation(); // return to conversation
         }
+        */
       }
       else {
         quote = q_data[0].description;
@@ -67,6 +69,15 @@ App.populator('home', function (page) {
       });
     });
   } 
+
+  try _{
+    if (cards.kik.returnToConversation) {
+      // Card was launched by a conversation
+      cards.kik.returnToConversation(); // return to conversation
+    }
+  } catch (e) {
+
+  }
 
 /*
   function loadquote(q_data) {
