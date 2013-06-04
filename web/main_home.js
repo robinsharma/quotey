@@ -33,12 +33,40 @@ App.populator('home', function (page) {
         title : 'Quote:' ,
         text  : quote ,
         pic   : "img/quotey_icon.png" ,
-        linkData: JSON.stringify(data[0])
+        big   : true ,
+        linkData: data
       });
     });
   } 
 
+/*
+  function loadquote(data) {
+    if (cards.kik.returnToConversation) {
+      // Card was launched by a conversation
+      cards.kik.returnToConversation(); // return to conversation
+    }
+    if(cards.kik.message) {
+      quote = linkData[0].description;
+      quote_div.html(quote);
 
+    }else{
+      quote = data[0].description;
+      quote_div.html(quote);
+    }
+    // Handle kik button
+    kik_button.click( function () {
+      cards.kik.send({
+        title : 'Quote:' ,
+        text  : quote ,
+        pic   : "img/quotey_icon.png" ,
+        big   : true ,
+        linkData: data
+      });
+    });
+  } 
+*/
+
+// Hide kik button if card opened in browser
 try {
   if(!cards.kik){
     kik_button.hide();
