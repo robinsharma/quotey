@@ -26,8 +26,7 @@ App.populator('home', function (page) {
   function loadquote(q_data) {
     try { // try to run card stuff
       if (cards.kik.message) {
-        q_data = cards.kik.message.data;
-        quote = q_data[0].description;
+        quote = cards.kik.message.data[0].description;
         quote_div.html(quote);
         if (cards.kik.returnToConversation) {
           // Card was launched by a conversation
