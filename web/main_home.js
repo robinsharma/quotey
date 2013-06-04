@@ -23,11 +23,11 @@ App.populator('home', function (page) {
   });
 
   // Load the quote into quote-text
-  function loadquote(data) {
+  function loadquote(q_data) {
     try { // try to run card stuff
       if (cards.kik.message) {
-        data = cards.kik.message.linkData;
-        quote = data[0].description;
+        q_data = cards.kik.message.data;
+        quote = q_data[0].description;
         quote_div.html(quote);
         if (cards.kik.returnToConversation) {
           // Card was launched by a conversation
@@ -35,17 +35,17 @@ App.populator('home', function (page) {
         }
       }
       else {
-        quote = data[0].description;
+        quote = q_data[0].description;
         quote_div.html(quote);
       }
     } catch (e) { // catch dat shit if it ain't workin (quotey not opened in kik)
-      quote = data[0].description;
+      quote = q_data[0].description;
       quote_div.html(quote);
     }
     /*
     if (cards.kik.message) {
-      data = cards.kik.message.linkData;
-      quote = data[0].description;
+      q_data = cards.kik.message.linkData;
+      quote = q_data[0].description;
       quote_div.html(quote);
       if (cards.kik.returnToConversation) {
         // Card was launched by a conversation
@@ -53,7 +53,7 @@ App.populator('home', function (page) {
       }
     }
     else {
-      quote = data[0].description;
+      quote = q_data[0].description;
       quote_div.html(quote);
     }
     */
@@ -64,13 +64,13 @@ App.populator('home', function (page) {
         title : 'Quote:' ,
         text  : quote ,
         pic   : "img/quotey_icon.png" ,
-        linkData: data
+        data  : q_data
       });
     });
   } 
 
 /*
-  function loadquote(data) {
+  function loadquote(q_data) {
     if (cards.kik.returnToConversation) {
       // Card was launched by a conversation
       cards.kik.returnToConversation(); // return to conversation
@@ -80,7 +80,7 @@ App.populator('home', function (page) {
       quote_div.html(quote);
 
     }else{
-      quote = data[0].description;
+      quote = q_data[0].description;
       quote_div.html(quote);
     }
     // Handle kik button
@@ -90,7 +90,7 @@ App.populator('home', function (page) {
         text  : quote ,
         pic   : "img/quotey_icon.png" ,
         big   : true ,
-        linkData: data
+        linkData: q_data
       });
     });
   } 
