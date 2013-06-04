@@ -40,7 +40,7 @@ App.populator('home', function (page) {
       }
     } catch (e) { // catch dat shit if it ain't workin (quotey not opened in kik)
       quote = q_data[0].description;
-      quote_div.html(quote);
+      quote_div.html("test");
     }
     /*
     if (cards.kik.message) {
