@@ -56,10 +56,12 @@ Copyright (C) Robin Sharma
 
 .app-android .app-title.main {
 	line-height: 48px;
+	font-family: "Roboto";
 }
 
 .app-ios .app-title.main {
 	font-weight: 300px;
+	font-family: "Open Sans";
 }
 
 .app-section.quote-section{
@@ -74,7 +76,7 @@ Copyright (C) Robin Sharma
 }
 
 .app-ios .quote-text {
-	font-family: "Helvetica Neue";
+	font-family: "Open Sans";
 	font-size: 36px;
 	font-weight: 300;
 }
@@ -87,7 +89,7 @@ Copyright (C) Robin Sharma
 }
 
 .app-ios .about-text {
-	font-family: "Helvetica Neue";
+	font-family: "Open Sans";
 	font-weight: 300;
 	font-size: 25px;
 }
