@@ -53,6 +53,11 @@ Copyright (C) Robin Sharma
 	overflow: hidden;
 	white-space: nowrap
 }
+/* Set app title to center*/
+.app-ios .app-title.main {
+	text-align: center;
+	padding-left: 0px;
+}
 
 .app-android .app-title.main {
 	line-height: 48px;
