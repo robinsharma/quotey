@@ -17,57 +17,102 @@
     <!-- MAIN PAGE -->
     <div class="app-page" data-page="home">
       <div class="app-topbar main">
+        <div class="app-title main">quotey</div>
+      </div>
+      <div class="app-content">
+        <div class="app-section quote-section">
+          <div class="quote-text">Welcome to <b>quotey</b>! Please choose a category: </div>
+        </div>
+        <div class="app-section">
+          <div class="app-button" data-target="Random">Random Quotes</div>
+          <div class="app-button" data-target="Inspirational">Inspirational Quote of the Day</div>
+          <div class="app-button" data-target="About">About</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="app-page" data-page="About">
+      <div class="app-topbar main about">
+        <div class="app-title main">About quotey</div>
+        <div class="app-button back left" data-back="true">Back</div>
+      </div>
+      <div class="app-content">
+        <div class="app-section">
+          <div class="about-text">
+            <center><b> About </b></center>
+            <hr>
+            The quotes found in <b>quotey</b> are courtesy of the rss feed found at QuotesDaddy.com/feed.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Random Quote -->
+    <div class="app-page" data-page="Random">
+      <div class="app-topbar main inspire">
         <div class="app-button kik right" data-clickable-class="active" style="-webkit-tap-highlight-color: rgba(255, 255, 255, 0);"></div>
         <div class="app-title main">quotey</div>
+        <div class="app-button back left">Back</div>
+
       </div>
       <div class="app-content">
         <div class="app-section quote-section">
           <div class="quote-text"></div>
         </div>
         <div class="app-section">
-          <div class="app-button" id="next_quote">Next Quote</div>
-          <div class="app-button" data-target="About">About</div>
+          <div class="app-button" id="next_quote">Reload</div>
         </div>
       </div>
     </div>
 
-    <!-- PAGE 2 -->
-    <div class="app-page" data-page="About">
-      <div class="app-topbar main">
-        <div class="app-title main">About quotey</div>
+    <!-- Inspirational Quote Page -->
+    <div class="app-page" data-page="Inspirational">
+      <div class="app-topbar main inspire">
+        <div class="app-button kik right" data-clickable-class="active" style="-webkit-tap-highlight-color: rgba(255, 255, 255, 0);"></div>
+        <div class="app-title main">quotey</div>
+        <div class="app-button back left" data-back="true">Back</div>
+
       </div>
       <div class="app-content">
-        <div class="app-section">
-          <div class="about-text">
-            <h1>About quotey</h1>
-            <hr>
-            The quotes found in <b>quotey</b> are courtesy of the rss feed found at QuotesDaddy.com/feed.
-            <hr>
-            You only live once, but if you do it right, once is enough. - Mae West
-          </div>
-        </div>
-        <div class="app-section">
-            <div class="app-button" data-back="true">Back</div>
+        <div class="app-section quote-section">
+          <div class="quote-text"></div>
         </div>
       </div>
     </div>
+
+    <!-- Inspirational Quote Page -->
+    <div class="app-page" data-page="preview">
+      <div class="app-topbar main inspire">
+        <div class="app-button kik right" data-clickable-class="active" style="-webkit-tap-highlight-color: rgba(255, 255, 255, 0);"></div>
+        <div class="app-title main">quotey</div>
+        <div class="app-button back left" data-back="true">Back</div>
+
+      </div>
+      <div class="app-content">
+        <div class="app-section quote-section">
+          <div class="quote-text"></div>
+        </div>
+      </div>
+    </div>
+
 
     <!-- INCLUDED JS SCRIPTS -->
     <script src="zepto.js"></script>
     <script src="app.js"></script>
     <script src="main_home.js"></script>
     <script src="zerver/zAPI.js"></script>
-    <!--
+    <script src="zerver/inspireAPI.js"></script>
+
     <script>
 
       if(cards.browser && cards.browser.linkData) {
-        App.load('home', cards.browser.linkData);
+        App.load('preview', cards.browser.linkData);
        }
        else {
         App.load('home');
        }
     
     </script>
-  -->
   </body>
 </html>
