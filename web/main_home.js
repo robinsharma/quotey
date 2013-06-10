@@ -4,7 +4,7 @@ App.populator('home', function (page) {
   quote_div.html("Welcome to <b>quotey</b>! Please choose a category: ");
 });
 
-App.populator('Random', function(page) {
+App.populator('Random', function (page) {
 
   var x = $(page);
   var kik_button = $(x).find('.app-button.kik.right');
@@ -167,5 +167,5 @@ try {
   App.restore();
 }
 catch (err) {
-  App.load('home', 'fade');
+  App.load('home');
 }
