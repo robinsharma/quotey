@@ -4,11 +4,7 @@ App.populator('home', function (page) {
 
 App.populator('Random', function(page) {
 
-  if(cards.kik.message) {
-    App.load('preview', cards.kik.message.q);
-  } else {
-    App.load('home');
-  }
+
 
   cards.ready(function (){
     zAPI.getData(function(meta, quotes_data){
@@ -23,6 +19,12 @@ App.populator('Random', function(page) {
   try {
     if(!cards.kik){
       kik_button.hide();
+    } else {
+      if(cards.kik.message) {
+        App.load('preview', cards.kik.message.q);
+      } else {
+        App.load('home');
+      }
     }
   } catch (e) {
     kik_button.hide();
@@ -67,12 +69,6 @@ App.populator('Random', function(page) {
 
 App.populator('Inspirational', function (page) {
 
-  if(cards.kik.message) {
-    App.load('preview', cards.kik.message.q);
-  } else {
-    App.load('home');
-  }
-
   // Acquire data from feed.
   cards.ready(function (){
     inspireAPI.getData(function(meta, quotes_data){
@@ -87,6 +83,12 @@ App.populator('Inspirational', function (page) {
   try {
     if(!cards.kik){
       kik_button.hide();
+    } else {
+      if(cards.kik.message) {
+        App.load('preview', cards.kik.message.q);
+      } else {
+        App.load('home');
+      }
     }
   } catch (e) {
     kik_button.hide();
@@ -148,6 +150,11 @@ App.populator('preview', function(page, q_text){
           data  : { q : q_text }
         });
       });
+      if(cards.kik.message) {
+        App.load('preview', cards.kik.message.q);
+      } else {
+        App.load('home');
+      }
     }
   } catch (e) {
     kik_button.hide();
