@@ -126,7 +126,7 @@ App.populator('preview', function (page){
 try {
   var x = $(page);
   var kik_button = $(x).find('.app-button.kik.right');
-  quote = cards.message.q;
+  quote = cards.kik.message.q;
   try {
     if(!cards.kik){
       kik_button.hide();
