@@ -12,7 +12,6 @@ App.populator('Random', function(page) {
     } else {
       if(cards.browser.back) {
         cards.browser.back(App.load('home', 'slide-right'));
-
       }
     }
   } catch (e) {
@@ -148,9 +147,14 @@ App.populator('preview', function(page, q_data){
 
 
   var quote_div = $(x).find('.quote-text');
-  var quote = q_data.description;
 
-  quote_div.html(quote);
+  var quote = q_data.description;
+  if (q_data.description){
+      quote_div.html(quote);
+
+    } else {
+      quote_div.html("Didnt work :(");
+    }
 });
 
 try {
