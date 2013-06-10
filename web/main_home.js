@@ -6,6 +6,14 @@ App.populator('home', function (page) {
 
 App.populator('Random', function (page) {
 
+  cards.ready(function (){
+    zAPI.getData(function(meta, quotes_data){
+      if(quotes_data){
+        loadquote(quotes_data);
+      }
+    });
+  });
+
   var x = $(page);
   var kik_button = $(x).find('.app-button.kik.right');
   try {
@@ -34,16 +42,10 @@ App.populator('Random', function (page) {
   });
 
   $(x).find('.app-button.back.left').on('click', function() {
-    App.load('home', 'explode-out');
+    App.load('home', 'slide-right');
   });
 
-  cards.ready(function (){
-    zAPI.getData(function(meta, quotes_data){
-      if(quotes_data){
-        loadquote(quotes_data);
-      }
-    });
-  });
+
 
   function loadquote(q_data) {
     quote = q_data[0].description;
@@ -58,7 +60,6 @@ App.populator('Random', function (page) {
       });
     });
   }
-
 
 });
 
@@ -121,16 +122,26 @@ App.populator('About', function (page) {
 
 App.populator('preview', function (page) {
   var x = $(page);
+  quote = cards.kik.message.q;
   var back_button = $(x).find('.app-button.back.left');
   back_button.on('click', function() {
-    App.load('home', 'explode-out');
+    App.load('home');
   });
+  var quote_div = $(x).find('.quote-text');
+
+  if (quote){
+    quote_div.html(quote);
+  } else {
+    App.load('home');
+  }
+
   var os = cards.utils.platform.os;
   if(os.android) {
     back_button.hide();
   }
+
   var kik_button = $(x).find('.app-button.kik.right');
-  quote = cards.kik.message.q;
+
   try {
     if(!cards.kik){
       kik_button.hide();
@@ -147,15 +158,6 @@ App.populator('preview', function (page) {
     }
   } catch (e) {
     kik_button.hide();
-  }
-
-  var quote_div = $(x).find('.quote-text');
-
-  if (quote){
-      quote_div.html(quote);
-
-  } else {
-    quote_div.html("Didnt work :( !");
   }
 });
 
