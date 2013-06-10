@@ -141,7 +141,7 @@ try {
         });
       });
       if(cards.kik.message) {
-        App.load('preview', cards.kik.message.q);
+        App.load('preview');
       } else {
         App.load('home');
       }
