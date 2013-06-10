@@ -1,5 +1,6 @@
 App.populator('home', function (page) {
-  // implement slowly changing colours?
+  var quote_div = $(x).find('.quote-text');
+  quote_div.html("Welcome to <b>quotey</b>! Please choose a category: ");
 });
 
 App.populator('Random', function(page) {
@@ -62,14 +63,6 @@ App.populator('Random', function(page) {
 
 App.populator('Inspirational', function (page) {
 
-  // Acquire data from feed.
-  cards.ready(function (){
-    inspireAPI.getData(function(meta, quotes_data){
-      if(quotes_data){
-        loadquote(quotes_data);
-      }
-    });
-  });
 
   var x = $(page); // set current page to variable x
   var kik_button = $(x).find('.app-button.kik.right'); // Find location of kik button
@@ -92,8 +85,18 @@ App.populator('Inspirational', function (page) {
   
   quote_div.html(quote); // Default, placeholder quote.
 
+  cards.ready(function (){
+    inspireAPI.getData(function(meta, quotes_data){
+      if(quotes_data){
+        loadquote(quotes_data);
+      }
+    });
+  });
   // Load the quote into quote-text
   function loadquote(q_data) {
+    quote = q_data[0].description;
+    quote_div.html(quote);
+
     kik_button.click( function () {
       cards.kik.send({
         title : 'Quote:' ,
@@ -102,11 +105,6 @@ App.populator('Inspirational', function (page) {
         data  : { q : q_data[0].description }
       });
     });
-    if(cards.kik && cards.kik.message) {
-      App.load('preview', cards.kik.message.q);
-    }
-    quote = q_data[0].description;
-    quote_div.html(quote);
   }
 });
 
