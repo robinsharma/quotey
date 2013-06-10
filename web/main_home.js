@@ -165,7 +165,7 @@ try {
   }
 } catch (e) {
   var quote_div = $(x).find('.quote-text');
-  quote_div.html("Didnt work :( !");
+  quote_div.html("Didnt work :( !!");
 
 }
 });
