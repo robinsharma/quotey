@@ -118,6 +118,7 @@ App.populator('About', function (page) {
   }
 });
 
+/*
 App.populator('preview', function(page, q_text){
 try {
   var x = $(page);
@@ -160,6 +161,7 @@ try {
 
 }
 });
+*/
 
 try {
   App.restore();
