@@ -100,6 +100,7 @@ App.populator('Inspirational', function (page) {
     });
     quote = q_data[0].description;
     quote_div.html(quote);
+  }
 });
 
 App.populator('About', function (page) {
@@ -111,18 +112,30 @@ App.populator('About', function (page) {
   }
 });
 
-App.populator('preview', function(page, data){
+App.populator('preview', function(page, q_data){
   var x = $(page);
   var kik_button = $(x).find('.app-button.kik.right');
   try {
     if(!cards.kik){
       kik_button.hide();
+    } 
+    else {
+      kik_button.click( function () {
+        cards.kik.send({
+          title : 'Quote:' ,
+          text  : quote ,
+          pic   : "img/quotey_icon.png" ,
+          data  : q_data
+        });
+      });
     }
   } catch (e) {
     kik_button.hide();
   }
+
+
   var quote_div = $(x).find('.quote-text');
-  var quote = data.description;
+  var quote = q_data.description;
 
   quote_div.html(quote);
 });

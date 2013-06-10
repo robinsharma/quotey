@@ -56,6 +56,10 @@ Copyright (C) Robin Sharma
 	background: #08517a;
 }
 
+.app-topbar.main.random {
+	background: #38722d;
+}
+
 .app-title.main {
 	margin: 0 auto;
 	padding-left: 10px;
@@ -90,6 +94,15 @@ Copyright (C) Robin Sharma
 	font-family: "Helvetica Neue",'Roboto', sans-serif;
 	background: #222;
 }
+
+.app-section.quote-section.inspire{
+	background: #7a3108;
+}
+
+.app-section.quote-section.random {
+	background: #143f4d;
+}
+
 .quote-text {
 	padding: 10px;
 	font-size: 40px;
