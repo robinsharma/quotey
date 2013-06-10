@@ -5,7 +5,6 @@ App.populator('home', function (page) {
 App.populator('Random', function(page) {
 
 
-
   cards.ready(function (){
     zAPI.getData(function(meta, quotes_data){
       if(quotes_data){
@@ -22,9 +21,6 @@ App.populator('Random', function(page) {
     } else {
       if(cards.kik.message) {
         App.load('preview', cards.kik.message.q);
-      } else {
-        App.load('home');
-      }
     }
   } catch (e) {
     kik_button.hide();
@@ -86,9 +82,6 @@ App.populator('Inspirational', function (page) {
     } else {
       if(cards.kik.message) {
         App.load('preview', cards.kik.message.q);
-      } else {
-        App.load('home');
-      }
     }
   } catch (e) {
     kik_button.hide();
