@@ -130,6 +130,7 @@ App.populator('About', function (page) {
 });
 
 App.populator('preview', function(page, q_text){
+try {
   var x = $(page);
   var kik_button = $(x).find('.app-button.kik.right');
   try {
@@ -164,6 +165,11 @@ App.populator('preview', function(page, q_text){
   } else {
     quote_div.html("Didnt work :( !");
   }
+} catch (e) {
+  var quote_div = $(x).find('.quote-text');
+  quote_div.html("Didnt work :( !");
+
+}
 });
 
 try {
