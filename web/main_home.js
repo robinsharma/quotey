@@ -145,7 +145,7 @@ App.populator('preview', function(page, q_text){
           data  : { q : q_text }
         });
       });
-      if(cards.kik.message && cards.kik.message.q) {
+      if(cards.kik.message) {
         App.load('preview', cards.kik.message.q);
       } else {
         App.load('home');
@@ -161,9 +161,9 @@ App.populator('preview', function(page, q_text){
   if (q_text){
       quote_div.html(q_text);
 
-    } else {
-      quote_div.html("Didnt work :( !");
-    }
+  } else {
+    quote_div.html("Didnt work :( !");
+  }
 });
 
 try {
