@@ -46,6 +46,14 @@ App.populator('Random', function(page) {
   });
 
   function loadquote(q_data) {
+    kik_button.click( function () {
+      cards.kik.send({
+        title : 'Quote:' ,
+        text  : quote ,
+        pic   : "img/quotey_icon.png" ,
+        data  : q_data[0]
+      });
+    });
     quote = q_data[0].description;
     quote_div.html(quote);
   }

@@ -29,6 +29,7 @@ Copyright (C) Robin Sharma
 
 .app-button.back.left {
 	background-image: none;
+	border: none;
 }
 
 .app-topbar.main {
