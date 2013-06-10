@@ -58,7 +58,7 @@ App.populator('Random', function (page) {
       });
     });
     if(cards.kik && cards.kik.message) {
-      App.load('preview', cards.kik.message.q);
+      App.load('preview');
     }
   }
 
@@ -122,10 +122,11 @@ App.populator('About', function (page) {
 });
 
 
-App.populator('preview', function(page, q_text){
+App.populator('preview', function (page, q_text){
 try {
   var x = $(page);
   var kik_button = $(x).find('.app-button.kik.right');
+  quote = cards.message.q;
   try {
     if(!cards.kik){
       kik_button.hide();
@@ -134,9 +135,9 @@ try {
       kik_button.click( function () {
         cards.kik.send({
           title : 'Quote:' ,
-          text  : q_text ,
+          text  : quote ,
           pic   : "img/quotey_icon.png" ,
-          data  : { q : q_text }
+          data  : { q : quote }
         });
       });
       if(cards.kik.message) {
@@ -152,8 +153,8 @@ try {
 
   var quote_div = $(x).find('.quote-text');
 
-  if (q_text){
-      quote_div.html(q_text);
+  if (quote){
+      quote_div.html(quote);
 
   } else {
     quote_div.html("Didnt work :( !");
