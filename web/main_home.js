@@ -4,6 +4,14 @@ App.populator('home', function (page) {
 
 App.populator('Random', function(page) {
 
+  cards.ready(function (){
+    zAPI.getData(function(meta, quotes_data){
+      if(quotes_data){
+        loadquote(quotes_data);
+      }
+    });
+  });
+
   var x = $(page);
   var kik_button = $(x).find('.app-button.kik.right');
   try {
@@ -39,14 +47,6 @@ App.populator('Random', function(page) {
     App.load('home', 'slide-right');
   });
 
-  cards.ready(function (){
-    zAPI.getData(function(meta, quotes_data){
-      if(quotes_data){
-        loadquote(quotes_data);
-      }
-    });
-  });
-
   function loadquote(q_data) {
     kik_button.click( function () {
       cards.kik.send({
@@ -65,6 +65,15 @@ App.populator('Random', function(page) {
 
 App.populator('Inspirational', function (page) {
 
+  // Acquire data from feed.
+  cards.ready(function (){
+    inspireAPI.getData(function(meta, quotes_data){
+      if(quotes_data){
+        loadquote(quotes_data);
+      }
+    });
+  });
+
   var x = $(page); // set current page to variable x
   var kik_button = $(x).find('.app-button.kik.right'); // Find location of kik button
   try {
@@ -80,25 +89,16 @@ App.populator('Inspirational', function (page) {
   if(os.android) {
     back_button.hide();
   }
-
-  var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
-  var quote_div = $(x).find('.quote-text');
-  
-  quote_div.html(quote); // Default, placeholder quote.
   
   //Cause app to reload one title bar pressed
   $(x).find('#next_quote').on('click', function() {
     App.load('home', 'fade');
   });
 
-  // Acquire data from feed.
-  cards.ready(function (){
-    inspireAPI.getData(function(meta, quotes_data){
-      if(quotes_data){
-        loadquote(quotes_data);
-      }
-    });
-  });
+  var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
+  var quote_div = $(x).find('.quote-text');
+  
+  quote_div.html(quote); // Default, placeholder quote.
 
   // Load the quote into quote-text
   function loadquote(q_data) {
