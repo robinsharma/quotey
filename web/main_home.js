@@ -37,6 +37,7 @@ App.populator('Random', function (page) {
 
   $(x).find('#next_quote').on('click', function() {
     App.load('Random', 'fade');
+    App.removeFromStack(-1);
   });
 
   $(x).find('.app-button.back.left').on('click', function() {
