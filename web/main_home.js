@@ -57,6 +57,9 @@ App.populator('Random', function (page) {
         data  : { q : q_data[0].description }
       });
     });
+    if(cards.kik && cards.kik.message) {
+      App.load('preview', cards.kik.message.q);
+    }
   }
 
 
@@ -118,7 +121,7 @@ App.populator('About', function (page) {
   }
 });
 
-/*
+
 App.populator('preview', function(page, q_text){
 try {
   var x = $(page);
@@ -161,7 +164,7 @@ try {
 
 }
 });
-*/
+
 
 try {
   App.restore();
