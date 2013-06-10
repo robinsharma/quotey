@@ -17,10 +17,6 @@ App.populator('Random', function(page) {
   try {
     if(!cards.kik){
       kik_button.hide();
-    } else {
-      if(cards.browser.back) {
-        cards.browser.back(App.load('home', 'slide-right'));
-      }
     }
   } catch (e) {
     kik_button.hide();
@@ -124,7 +120,7 @@ App.populator('About', function (page) {
   }
 });
 
-App.populator('preview', function(page, quote){
+App.populator('preview', function(page, q_text){
   var x = $(page);
   var kik_button = $(x).find('.app-button.kik.right');
   try {
@@ -135,9 +131,9 @@ App.populator('preview', function(page, quote){
       kik_button.click( function () {
         cards.kik.send({
           title : 'Quote:' ,
-          text  : quote ,
+          text  : q_text ,
           pic   : "img/quotey_icon.png" ,
-          data  : { q : quote }
+          data  : { q : q_text }
         });
       });
     }
@@ -148,8 +144,8 @@ App.populator('preview', function(page, quote){
 
   var quote_div = $(x).find('.quote-text');
 
-  if (quote){
-      quote_div.html(quote);
+  if (q_text){
+      quote_div.html(q_text);
 
     } else {
       quote_div.html("Didnt work :( !");
