@@ -58,7 +58,7 @@ App.populator('Random', function (page) {
       });
     });
     if(cards.kik && cards.kik.message) {
-      App.load('preview');
+      App.load('preview', 'explode-in');
     }
   }
 
@@ -167,5 +167,5 @@ try {
   App.restore();
 }
 catch (err) {
-  App.load('About');
+  App.load('home');
 }
