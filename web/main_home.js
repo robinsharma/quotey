@@ -1,7 +1,5 @@
 App.populator('home', function (page) {
-  var x = $(page);
-  var quote_div = $(x).find('.quote-text');
-  quote_div.html("Welcome to <b>quotey</b>! Please choose a category: ");
+  //chaning colours?
 });
 
 App.populator('Random', function (page) {
