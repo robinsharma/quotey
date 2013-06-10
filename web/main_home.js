@@ -122,9 +122,16 @@ App.populator('About', function (page) {
 });
 
 
-App.populator('preview', function (page){
-try {
+App.populator('preview', function (page) {
   var x = $(page);
+  var back_button = $(x).find('.app-button.back.left');
+  back_button.on('click', function() {
+    App.load('home', 'explode-out');
+  });
+  var os = cards.utils.platform.os;
+  if(os.android) {
+    back_button.hide();
+  }
   var kik_button = $(x).find('.app-button.kik.right');
   quote = cards.kik.message.q;
   try {
@@ -140,16 +147,10 @@ try {
           data  : { q : quote }
         });
       });
-      if(cards.kik.message) {
-        App.load('preview');
-      } else {
-        App.load('home');
-      }
     }
   } catch (e) {
     kik_button.hide();
   }
-
 
   var quote_div = $(x).find('.quote-text');
 
@@ -159,11 +160,6 @@ try {
   } else {
     quote_div.html("Didnt work :( !");
   }
-} catch (e) {
-  var quote_div = $(x).find('.quote-text');
-  quote_div.html("Didnt work :( !!");
-
-}
 });
 
 
