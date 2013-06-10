@@ -27,7 +27,6 @@
           <div class="app-button" data-target="Random">Random Quotes</div>
           <div class="app-button" data-target="Inspirational">Inspirational Quote of the Day</div>
           <div class="app-button" data-target="About">About</div>
-                    <div class="app-button" data-target="preview">Preview</div>
 
         </div>
       </div>
@@ -109,7 +108,7 @@
     <script>
 
       if(cards.kik && cards.kik.message) {
-        App.load('preview', cards.kik.message.data);
+        App.load('preview', cards.kik.message.q);
       }
 
     
