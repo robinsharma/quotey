@@ -4,7 +4,6 @@ App.populator('home', function (page) {
 
 App.populator('Random', function(page) {
 
-
   cards.ready(function (){
     zAPI.getData(function(meta, quotes_data){
       if(quotes_data){
@@ -89,11 +88,6 @@ App.populator('Inspirational', function (page) {
   if(os.android) {
     back_button.hide();
   }
-  
-  //Cause app to reload one title bar pressed
-  $(x).find('#next_quote').on('click', function() {
-    App.load('home', 'fade');
-  });
 
   var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
   var quote_div = $(x).find('.quote-text');
