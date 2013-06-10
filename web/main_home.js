@@ -57,9 +57,6 @@ App.populator('Random', function (page) {
         data  : { q : q_data[0].description }
       });
     });
-    if(cards.kik && cards.kik.message) {
-      App.load('preview', 'explode-in');
-    }
   }
 
 
