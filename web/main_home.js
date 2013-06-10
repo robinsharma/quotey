@@ -4,14 +4,6 @@ App.populator('home', function (page) {
 
 App.populator('Random', function(page) {
 
-  cards.ready(function (){
-    zAPI.getData(function(meta, quotes_data){
-      if(quotes_data){
-        loadquote(quotes_data);
-      }
-    });
-  });
-
   var x = $(page);
   var kik_button = $(x).find('.app-button.kik.right');
   try {
@@ -40,10 +32,21 @@ App.populator('Random', function(page) {
   });
 
   $(x).find('.app-button.back.left').on('click', function() {
-    App.load('home', 'slide-right');
+    App.load('home', 'explode-out');
+  });
+
+  cards.ready(function (){
+    zAPI.getData(function(meta, quotes_data){
+      if(quotes_data){
+        loadquote(quotes_data);
+      }
+    });
   });
 
   function loadquote(q_data) {
+    quote = q_data[0].description;
+    quote_div.html(quote);
+
     kik_button.click( function () {
       cards.kik.send({
         title : 'Quote:' ,
@@ -52,11 +55,6 @@ App.populator('Random', function(page) {
         data  : { q : q_data[0].description }
       });
     });
-    if(cards.kik && cards.kik.message) {
-      App.load('preview', cards.kik.message.q);
-    }
-    quote = q_data[0].description;
-    quote_div.html(quote);
   }
 
 
