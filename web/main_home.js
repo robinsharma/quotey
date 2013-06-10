@@ -49,7 +49,7 @@ App.populator('Random', function(page) {
         title : 'Quote:' ,
         text  : quote ,
         pic   : "img/quotey_icon.png" ,
-        data  : { q : q_data[0].description }
+        linkData  : { q : q_data[0].description }
       });
     });
     quote = q_data[0].description;
@@ -103,7 +103,7 @@ App.populator('Inspirational', function (page) {
         title : 'Quote:' ,
         text  : quote ,
         pic   : "img/quotey_icon.png" ,
-        data  : { q : q_data[0].description }
+        linkData  : { q : q_data[0].description }
       });
     });
     quote = q_data[0].description;
@@ -133,7 +133,7 @@ App.populator('preview', function(page, q_text){
           title : 'Quote:' ,
           text  : q_text ,
           pic   : "img/quotey_icon.png" ,
-          data  : { q : q_text }
+          linkData  : { q : q_text }
         });
       });
     }
