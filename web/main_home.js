@@ -53,7 +53,7 @@ App.populator('Random', function(page) {
         title : 'Quote:' ,
         text  : quote ,
         pic   : "img/quotey_icon.png" ,
-        data  : q_data[0]
+        data  : { q : q_data[0].description }
       });
     });
     quote = q_data[0].description;
@@ -107,7 +107,7 @@ App.populator('Inspirational', function (page) {
         title : 'Quote:' ,
         text  : quote ,
         pic   : "img/quotey_icon.png" ,
-        data  : q_data[0]
+        data  : { q : q_data[0].description }
       });
     });
     quote = q_data[0].description;
@@ -124,7 +124,7 @@ App.populator('About', function (page) {
   }
 });
 
-App.populator('preview', function(page, q_data){
+App.populator('preview', function(page, quote){
   var x = $(page);
   var kik_button = $(x).find('.app-button.kik.right');
   try {
@@ -137,7 +137,7 @@ App.populator('preview', function(page, q_data){
           title : 'Quote:' ,
           text  : quote ,
           pic   : "img/quotey_icon.png" ,
-          data  : q_data
+          data  : { q : quote }
         });
       });
     }
@@ -148,7 +148,6 @@ App.populator('preview', function(page, q_data){
 
   var quote_div = $(x).find('.quote-text');
 
-  var quote = q_data.description;
   if (q_data.description){
       quote_div.html(quote);
 
