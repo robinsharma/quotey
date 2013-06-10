@@ -9,6 +9,8 @@ App.populator('Random', function(page) {
   try {
     if(!cards.kik){
       kik_button.hide();
+    } else {
+      cards.browser.back(App.load('home', 'slide-right'));
     }
   } catch (e) {
     kik_button.hide();
