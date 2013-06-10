@@ -148,11 +148,11 @@ App.populator('preview', function(page, quote){
 
   var quote_div = $(x).find('.quote-text');
 
-  if (q_data.description){
+  if (quote){
       quote_div.html(quote);
 
     } else {
-      quote_div.html("Didnt work :(");
+      quote_div.html("Didnt work :( !");
     }
 });
 
