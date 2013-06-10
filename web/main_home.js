@@ -21,6 +21,7 @@ App.populator('Random', function(page) {
     } else {
       if(cards.kik.message) {
         App.load('preview', cards.kik.message.q);
+      }
     }
   } catch (e) {
     kik_button.hide();
@@ -82,6 +83,7 @@ App.populator('Inspirational', function (page) {
     } else {
       if(cards.kik.message) {
         App.load('preview', cards.kik.message.q);
+      }
     }
   } catch (e) {
     kik_button.hide();
@@ -143,7 +145,7 @@ App.populator('preview', function(page, q_text){
           data  : { q : q_text }
         });
       });
-      if(cards.kik.message) {
+      if(cards.kik.message && cards.kik.message.q) {
         App.load('preview', cards.kik.message.q);
       } else {
         App.load('home');
