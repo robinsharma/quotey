@@ -1,5 +1,5 @@
 App.populator('home', function (page) {
-  //chaning colours?
+  //changing colours?
 });
 
 App.populator('Random', function (page) {
