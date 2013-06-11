@@ -1,9 +1,23 @@
+/*
+ * Home Page Populator
+ * 
+ * Static home page. No js needed
+ *
+ */
 App.populator('home', function (page) {
   //changing colours?
 });
 
+/*
+ * Random Quotes Page populator
+ * 
+ * Acquires and displays random quotes from the zAPI.js
+ *
+ */
+
 App.populator('Random', function (page) {
 
+  // Acquire data form feed
   cards.ready(function (){
     zAPI.getData(function(meta, quotes_data){
       if(quotes_data){
@@ -12,8 +26,12 @@ App.populator('Random', function (page) {
     });
   });
 
-  var x = $(page);
+  var x = $(page); // set Random HTML page to variable x
+
+  // Find kik button
   var kik_button = $(x).find('.app-button.kik.right');
+  
+  // hide the kik button if opened in broswer and not kik
   try {
     if(!cards.kik){
       kik_button.hide();
@@ -25,31 +43,35 @@ App.populator('Random', function (page) {
   var back_button = $(x).find('.app-button.back.left');
   var os = cards.utils.platform.os;
   //typeof os.name    === 'android'; // 'ios', 'android', 'osx', 'windows', etc
-  if(os.android) {
+  if(!os.ios) {
+    // Hide back button if not in iOS
     back_button.hide();
+  } else {
+      // Else declare its functionality
+      back_button.on('click', function() {
+        App.load('home', 'slide-right');
+      });
   }
 
+  // Find quote container location
   var quote_div = $(x).find('.quote-text');
   var quote = "\"<b>quotey</b> is loading...\" - luckysharms";
 
+  // populate it with loading quote
   quote_div.html(quote);
 
-
+  // Declare/set up next quote button
   $(x).find('#next_quote').on('click', function() {
     App.load('Random', 'fade');
     App.removeFromStack(-1);
-  });
+  }); 
 
-  $(x).find('.app-button.back.left').on('click', function() {
-    App.load('home', 'slide-right');
-  });
-
-
-
+  // loadquote function loads the quote acquired from rss feed and displays it in the quote container
   function loadquote(q_data) {
     quote = q_data[0].description;
     quote_div.html(quote);
 
+    //Set up kik button
     kik_button.click( function () {
       cards.kik.send({
         title : 'Quote:' ,
@@ -77,7 +99,7 @@ App.populator('Inspirational', function (page) {
 
   var back_button = $(x).find('.app-button.back.left');
   var os = cards.utils.platform.os;
-  if(os.android) {
+  if(!os.ios) {
     back_button.hide();
   }
 
