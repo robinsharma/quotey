@@ -122,10 +122,7 @@ App.populator('About', function (page) {
 App.populator('preview', function (page) {
   var x = $(page);
   quote = cards.kik.message.q;
-  var back_button = $(x).find('.app-button.back.left');
-  back_button.on('click', function() {
-    App.load('home');
-  });
+
   var quote_div = $(x).find('.quote-text');
 
   if (quote){
