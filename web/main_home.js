@@ -87,8 +87,9 @@ App.populator('Random', function (page) {
 App.populator('Inspirational', function (page) {
 
 
-  var x = $(page); // set current page to variable x
+  var x = $(page); // set Inspirational HTML page to variable x
   var kik_button = $(x).find('.app-button.kik.right'); // Find location of kik button
+  //Hide kik button if linked opened in browser (not kik)
   try {
     if(!cards.kik){
       kik_button.hide();
@@ -97,6 +98,7 @@ App.populator('Inspirational', function (page) {
     kik_button.hide();
   }
 
+  // hide back button if not in iOS
   var back_button = $(x).find('.app-button.back.left');
   var os = cards.utils.platform.os;
   if(!os.ios) {
@@ -105,9 +107,10 @@ App.populator('Inspirational', function (page) {
 
   var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
   var quote_div = $(x).find('.quote-text');
-  
+  //Set loading quote
   quote_div.html(quote); // Default, placeholder quote.
 
+  // Acquire quote form rss feed
   cards.ready(function (){
     inspireAPI.getData(function(meta, quotes_data){
       if(quotes_data){
@@ -120,6 +123,7 @@ App.populator('Inspirational', function (page) {
     quote = q_data[0].description;
     quote_div.html(quote);
 
+    //Set up kik button
     kik_button.click( function () {
       cards.kik.send({
         title : 'Quote:' ,
@@ -130,6 +134,212 @@ App.populator('Inspirational', function (page) {
     });
   }
 });
+
+App.populator('Funny', function (page) {
+
+
+  var x = $(page); // set Inspirational HTML page to variable x
+  var kik_button = $(x).find('.app-button.kik.right'); // Find location of kik button
+  //Hide kik button if linked opened in browser (not kik)
+  try {
+    if(!cards.kik){
+      kik_button.hide();
+    }
+  } catch (e) {
+    kik_button.hide();
+  }
+
+  // hide back button if not in iOS
+  var back_button = $(x).find('.app-button.back.left');
+  var os = cards.utils.platform.os;
+  if(!os.ios) {
+    back_button.hide();
+  }
+
+  var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
+  var quote_div = $(x).find('.quote-text');
+  //Set loading quote
+  quote_div.html(quote); // Default, placeholder quote.
+
+  // Acquire quote form rss feed
+  cards.ready(function (){
+    funnyAPI.getData(function(meta, quotes_data){
+      if(quotes_data){
+        loadquote(quotes_data);
+      }
+    });
+  });
+  // Load the quote into quote-text
+  function loadquote(q_data) {
+    quote = q_data[0].description;
+    quote_div.html(quote);
+
+    //Set up kik button
+    kik_button.click( function () {
+      cards.kik.send({
+        title : 'Quote:' ,
+        text  : quote ,
+        pic   : "img/quotey_icon.png" ,
+        data  : { q : q_data[0].description }
+      });
+    });
+  }
+});
+
+App.populator('Love', function (page) {
+
+
+  var x = $(page); // set Inspirational HTML page to variable x
+  var kik_button = $(x).find('.app-button.kik.right'); // Find location of kik button
+  //Hide kik button if linked opened in browser (not kik)
+  try {
+    if(!cards.kik){
+      kik_button.hide();
+    }
+  } catch (e) {
+    kik_button.hide();
+  }
+
+  // hide back button if not in iOS
+  var back_button = $(x).find('.app-button.back.left');
+  var os = cards.utils.platform.os;
+  if(!os.ios) {
+    back_button.hide();
+  }
+
+  var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
+  var quote_div = $(x).find('.quote-text');
+  //Set loading quote
+  quote_div.html(quote); // Default, placeholder quote.
+
+  // Acquire quote form rss feed
+  cards.ready(function (){
+    loveAPI.getData(function(meta, quotes_data){
+      if(quotes_data){
+        loadquote(quotes_data);
+      }
+    });
+  });
+  // Load the quote into quote-text
+  function loadquote(q_data) {
+    quote = q_data[0].description;
+    quote_div.html(quote);
+
+    //Set up kik button
+    kik_button.click( function () {
+      cards.kik.send({
+        title : 'Quote:' ,
+        text  : quote ,
+        pic   : "img/quotey_icon.png" ,
+        data  : { q : q_data[0].description }
+      });
+    });
+  }
+});
+
+App.populator('Friendship', function (page) {
+
+
+  var x = $(page); // set Inspirational HTML page to variable x
+  var kik_button = $(x).find('.app-button.kik.right'); // Find location of kik button
+  //Hide kik button if linked opened in browser (not kik)
+  try {
+    if(!cards.kik){
+      kik_button.hide();
+    }
+  } catch (e) {
+    kik_button.hide();
+  }
+
+  // hide back button if not in iOS
+  var back_button = $(x).find('.app-button.back.left');
+  var os = cards.utils.platform.os;
+  if(!os.ios) {
+    back_button.hide();
+  }
+
+  var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
+  var quote_div = $(x).find('.quote-text');
+  //Set loading quote
+  quote_div.html(quote); // Default, placeholder quote.
+
+  // Acquire quote form rss feed
+  cards.ready(function (){
+    friendAPI.getData(function(meta, quotes_data){
+      if(quotes_data){
+        loadquote(quotes_data);
+      }
+    });
+  });
+  // Load the quote into quote-text
+  function loadquote(q_data) {
+    quote = q_data[0].description;
+    quote_div.html(quote);
+
+    //Set up kik button
+    kik_button.click( function () {
+      cards.kik.send({
+        title : 'Quote:' ,
+        text  : quote ,
+        pic   : "img/quotey_icon.png" ,
+        data  : { q : q_data[0].description }
+      });
+    });
+  }
+});
+
+
+App.populator('QuotesDaddy', function (page) {
+
+
+  var x = $(page); // set Inspirational HTML page to variable x
+  var kik_button = $(x).find('.app-button.kik.right'); // Find location of kik button
+  //Hide kik button if linked opened in browser (not kik)
+  try {
+    if(!cards.kik){
+      kik_button.hide();
+    }
+  } catch (e) {
+    kik_button.hide();
+  }
+
+  // hide back button if not in iOS
+  var back_button = $(x).find('.app-button.back.left');
+  var os = cards.utils.platform.os;
+  if(!os.ios) {
+    back_button.hide();
+  }
+
+  var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
+  var quote_div = $(x).find('.quote-text');
+  //Set loading quote
+  quote_div.html(quote); // Default, placeholder quote.
+
+  // Acquire quote form rss feed
+  cards.ready(function (){
+    quotesdaddyAPI.getData(function(meta, quotes_data){
+      if(quotes_data){
+        loadquote(quotes_data);
+      }
+    });
+  });
+  // Load the quote into quote-text
+  function loadquote(q_data) {
+    quote = q_data[0].description;
+    quote_div.html(quote);
+
+    //Set up kik button
+    kik_button.click( function () {
+      cards.kik.send({
+        title : 'Quote:' ,
+        text  : quote ,
+        pic   : "img/quotey_icon.png" ,
+        data  : { q : q_data[0].description }
+      });
+    });
+  }
+});
+
 
 App.populator('About', function (page) {
   var x = $(page);

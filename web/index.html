@@ -24,8 +24,12 @@
           <div class="quote-text">Welcome to <b>quotey</b>! Please choose a category: </div>
         </div>
         <div class="app-section">
-          <div class="app-button" data-target="Random">Random Quotes</div>
-          <div class="app-button" data-target="Inspirational">Inspirational Quote of the Day</div>
+          <div class="app-button" data-target="Random">Random</div>
+          <div class="app-button" data-target="Inspirational">Inspirational</div>
+          <div class="app-button" data-target="Funny">Funny</div>
+          <div class="app-button" data-target="Love">Love</div>
+          <div class="app-button" data-target="Friendship">Friendship</div>
+          <div class="app-button" data-target="QuotesDaddy">QuotesDaddy Users</div>
           <div class="app-button" data-target="About">About</div>
 
         </div>
@@ -82,6 +86,66 @@
       </div>
     </div>
 
+    <!-- Funny Quote Pages -->
+    <div class="app-page" data-page="Funny">
+      <div class="app-topbar main inspire">
+        <div class="app-button kik right" data-clickable-class="active" style="-webkit-tap-highlight-color: rgba(255, 255, 255, 0);"></div>
+        <div class="app-title main">quotey</div>
+        <div class="app-button back left" data-back="true">Back</div>
+
+      </div>
+      <div class="app-content">
+        <div class="app-section quote-section inspire">
+          <div class="quote-text"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Love Quote Pages -->
+    <div class="app-page" data-page="Love">
+      <div class="app-topbar main inspire">
+        <div class="app-button kik right" data-clickable-class="active" style="-webkit-tap-highlight-color: rgba(255, 255, 255, 0);"></div>
+        <div class="app-title main">quotey</div>
+        <div class="app-button back left" data-back="true">Back</div>
+
+      </div>
+      <div class="app-content">
+        <div class="app-section quote-section inspire">
+          <div class="quote-text"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Friendship Quote Pages -->
+    <div class="app-page" data-page="Friendship">
+      <div class="app-topbar main inspire">
+        <div class="app-button kik right" data-clickable-class="active" style="-webkit-tap-highlight-color: rgba(255, 255, 255, 0);"></div>
+        <div class="app-title main">quotey</div>
+        <div class="app-button back left" data-back="true">Back</div>
+
+      </div>
+      <div class="app-content">
+        <div class="app-section quote-section inspire">
+          <div class="quote-text"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QuoteDaddy Quote Pages -->
+    <div class="app-page" data-page="QuotesDaddy">
+      <div class="app-topbar main inspire">
+        <div class="app-button kik right" data-clickable-class="active" style="-webkit-tap-highlight-color: rgba(255, 255, 255, 0);"></div>
+        <div class="app-title main">quotey</div>
+        <div class="app-button back left" data-back="true">Back</div>
+
+      </div>
+      <div class="app-content">
+        <div class="app-section quote-section inspire">
+          <div class="quote-text"></div>
+        </div>
+      </div>
+    </div>
+
     <!-- Preview Quote Page -->
     <div class="app-page" data-page="preview">
       <div class="app-topbar main inspire">
@@ -104,6 +168,12 @@
     <script src="main_home.js"></script>
     <script src="zerver/zAPI.js"></script>
     <script src="zerver/inspireAPI.js"></script>
+    <script src="zerver/funnyAPI.js"></script>
+    <script src="zerver/loveAPI.js"></script>
+    <script src="zerver/friendAPI.js"></script>
+    <script src="zerver/quotesdaddyAPI.js"></script>
+
+
 
     <script type="text/javascript">
     if(cards.kik && cards.kik.message) {
