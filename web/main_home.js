@@ -353,7 +353,7 @@ App.populator('About', function (page) {
 
 App.populator('preview', function (page) {
   var x = $(page);
-  quote = cards.kik.message.q;
+  var quote = cards.kik.message.q;
 
   var quote_div = $(x).find('.quote-text');
 
