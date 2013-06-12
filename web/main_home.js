@@ -352,42 +352,42 @@ App.populator('About', function (page) {
 
 
 App.populator('preview', function (page) {
-  var x = $(page);
-  var quote = cards.kik.message.q;
-
-  var quote_div = $(x).find('.quote-text');
-
-  if (quote){
-    quote_div.html(quote);
-  } else {
-    App.load('home');
-  }
-
-  var os = cards.utils.platform.os;
-  if(!os.ios) {
-    back_button.hide();
-  } else {
-    $(x).find('#previewHome').hide();
-  }
-
-  var kik_button = $(x).find('.app-button.kik.right');
-
   try {
-    if(!cards.kik){
-      kik_button.hide();
-    } 
-    else {
-      kik_button.click( function () {
-        cards.kik.send({
-          title : 'Quote:' ,
-          text  : quote ,
-          pic   : "img/quotey_icon.png" ,
-          data  : { q : quote }
+    var x = $(page);
+    var quote = cards.kik.message.q;
+
+    var quote_div = $(x).find('.quote-text');
+
+    quote_div.html(quote);
+
+    var os = cards.utils.platform.os;
+    if(!os.ios) {
+      back_button.hide();
+    } else {
+      $(x).find('#previewHome').hide();
+    }
+
+    var kik_button = $(x).find('.app-button.kik.right');
+
+    try {
+      if(!cards.kik){
+        kik_button.hide();
+      } 
+      else {
+        kik_button.click( function () {
+          cards.kik.send({
+            title : 'Quote:' ,
+            text  : quote ,
+            pic   : "img/quotey_icon.png" ,
+            data  : { q : quote }
+          });
         });
-      });
+      }
+    } catch (e) {
+      kik_button.hide();
     }
   } catch (e) {
-    kik_button.hide();
+    App.load('home');
   }
 });
 
