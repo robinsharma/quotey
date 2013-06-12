@@ -39,7 +39,7 @@ Copyright (C) Robin Sharma
 	height: 44px;
 	width: 100%;
 	background: #000;
-	color: #DDD;
+	color: #FFF; /* orginially #DDD */
 	box-shadow: none;
 	text-decoration: none;
 	text-shadow: none;
@@ -60,6 +60,22 @@ Copyright (C) Robin Sharma
 
 .app-topbar.main.random {
 	background: #38722d;
+}
+
+.app-topbar.main.funny {
+	background: #019987;
+}
+
+.app-topbar.main.love {
+	background: #722d43;
+}
+
+.app-topbar.main.friendship {
+	background: #b94914;
+}
+
+.app-topbar.main.quotesdaddy {
+	background: #727272;
 }
 
 .app-title.main {
@@ -104,11 +120,27 @@ Copyright (C) Robin Sharma
 	background: #143f4d;
 }
 
+.app-section.quote-section.funny {
+	background: #236c9c;
+}
+
+.app-section.quote-section.love {
+	background: #811d1d;
+}
+
+.app-section.quote-section.friendship {
+	background: #1484b9;
+}
+
+.app-section.quote-section.quotesdaddy {
+	background: #313131;
+}
+
 .quote-text {
 	padding: 10px;
 	font-size: 40px;
 	font-weight: 100;
-	color: #DDD;
+	color: #FFF; /* originally #DDD */
 }
 
 .app-ios .quote-text {
