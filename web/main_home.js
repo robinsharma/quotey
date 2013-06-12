@@ -392,9 +392,9 @@ App.populator('preview', function (page) {
 });
 
 
-try {
-  App.restore();
-}
-catch (err) {
+//try {
+//  App.restore();
+//}
+//catch (err) {
   App.load('home');
-}
+//}
