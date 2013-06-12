@@ -345,7 +345,7 @@ App.populator('About', function (page) {
   var x = $(page);
   var back_button = $(x).find('.app-button.back.left');
   var os = cards.utils.platform.os;
-  if(os.android) {
+  if(!os.ios) {
     back_button.hide();
   }
 });
@@ -364,8 +364,10 @@ App.populator('preview', function (page) {
   }
 
   var os = cards.utils.platform.os;
-  if(os.android) {
+  if(!os.ios) {
     back_button.hide();
+  } else {
+    $(x).find('#previewHome').hide();
   }
 
   var kik_button = $(x).find('.app-button.kik.right');
