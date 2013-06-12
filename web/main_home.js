@@ -29,7 +29,7 @@ App.populator('Random', function (page) {
   var x = $(page); // set Random HTML page to variable x
 
   // Find kik button
-  var kik_button = $(x).find('.app-button.kik.right');
+  var kik_button = x.find('.app-button.kik.right');
   
   // hide the kik button if opened in broswer and not kik
   try {
@@ -40,7 +40,7 @@ App.populator('Random', function (page) {
     kik_button.hide();
   }
 
-  var back_button = $(x).find('.app-button.back.left');
+  var back_button = x.find('.app-button.back.left');
   var os = cards.utils.platform.os;
   //typeof os.name    === 'android'; // 'ios', 'android', 'osx', 'windows', etc
   if(!os.ios) {
@@ -54,14 +54,14 @@ App.populator('Random', function (page) {
   }
 
   // Find quote container location
-  var quote_div = $(x).find('.quote-text');
+  var quote_div = x.find('.quote-text');
   var quote = "\"<b>quotey</b> is loading...\" - luckysharms";
 
   // populate it with loading quote
   quote_div.html(quote);
 
   // Declare/set up next quote button
-  $(x).find('#next_quote').on('click', function() {
+  x.find('#next_quote').on('click', function() {
     App.load('Random', 'fade');
     App.removeFromStack(-1);
   }); 
@@ -88,7 +88,7 @@ App.populator('Inspirational', function (page) {
 
 
   var x = $(page); // set Inspirational HTML page to variable x
-  var kik_button = $(x).find('.app-button.kik.right'); // Find location of kik button
+  var kik_button = x.find('.app-button.kik.right'); // Find location of kik button
   //Hide kik button if linked opened in browser (not kik)
   try {
     if(!cards.kik){
@@ -99,14 +99,14 @@ App.populator('Inspirational', function (page) {
   }
 
   // hide back button if not in iOS
-  var back_button = $(x).find('.app-button.back.left');
+  var back_button = x.find('.app-button.back.left');
   var os = cards.utils.platform.os;
   if(!os.ios) {
     back_button.hide();
   }
 
   var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
-  var quote_div = $(x).find('.quote-text');
+  var quote_div = x.find('.quote-text');
   //Set loading quote
   quote_div.html(quote); // Default, placeholder quote.
 
@@ -139,7 +139,7 @@ App.populator('Funny', function (page) {
 
 
   var x = $(page); // set Inspirational HTML page to variable x
-  var kik_button = $(x).find('.app-button.kik.right'); // Find location of kik button
+  var kik_button = x.find('.app-button.kik.right'); // Find location of kik button
   //Hide kik button if linked opened in browser (not kik)
   try {
     if(!cards.kik){
@@ -150,14 +150,14 @@ App.populator('Funny', function (page) {
   }
 
   // hide back button if not in iOS
-  var back_button = $(x).find('.app-button.back.left');
+  var back_button = x.find('.app-button.back.left');
   var os = cards.utils.platform.os;
   if(!os.ios) {
     back_button.hide();
   }
 
   var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
-  var quote_div = $(x).find('.quote-text');
+  var quote_div = x.find('.quote-text');
   //Set loading quote
   quote_div.html(quote); // Default, placeholder quote.
 
@@ -190,7 +190,7 @@ App.populator('Love', function (page) {
 
 
   var x = $(page); // set Inspirational HTML page to variable x
-  var kik_button = $(x).find('.app-button.kik.right'); // Find location of kik button
+  var kik_button = x.find('.app-button.kik.right'); // Find location of kik button
   //Hide kik button if linked opened in browser (not kik)
   try {
     if(!cards.kik){
@@ -201,14 +201,14 @@ App.populator('Love', function (page) {
   }
 
   // hide back button if not in iOS
-  var back_button = $(x).find('.app-button.back.left');
+  var back_button = x.find('.app-button.back.left');
   var os = cards.utils.platform.os;
   if(!os.ios) {
     back_button.hide();
   }
 
   var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
-  var quote_div = $(x).find('.quote-text');
+  var quote_div = x.find('.quote-text');
   //Set loading quote
   quote_div.html(quote); // Default, placeholder quote.
 
@@ -241,7 +241,7 @@ App.populator('Friendship', function (page) {
 
 
   var x = $(page); // set Inspirational HTML page to variable x
-  var kik_button = $(x).find('.app-button.kik.right'); // Find location of kik button
+  var kik_button = x.find('.app-button.kik.right'); // Find location of kik button
   //Hide kik button if linked opened in browser (not kik)
   try {
     if(!cards.kik){
@@ -252,14 +252,14 @@ App.populator('Friendship', function (page) {
   }
 
   // hide back button if not in iOS
-  var back_button = $(x).find('.app-button.back.left');
+  var back_button = x.find('.app-button.back.left');
   var os = cards.utils.platform.os;
   if(!os.ios) {
     back_button.hide();
   }
 
   var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
-  var quote_div = $(x).find('.quote-text');
+  var quote_div = x.find('.quote-text');
   //Set loading quote
   quote_div.html(quote); // Default, placeholder quote.
 
@@ -293,7 +293,7 @@ App.populator('QuotesDaddy', function (page) {
 
 
   var x = $(page); // set Inspirational HTML page to variable x
-  var kik_button = $(x).find('.app-button.kik.right'); // Find location of kik button
+  var kik_button = x.find('.app-button.kik.right'); // Find location of kik button
   //Hide kik button if linked opened in browser (not kik)
   try {
     if(!cards.kik){
@@ -304,14 +304,14 @@ App.populator('QuotesDaddy', function (page) {
   }
 
   // hide back button if not in iOS
-  var back_button = $(x).find('.app-button.back.left');
+  var back_button = x.find('.app-button.back.left');
   var os = cards.utils.platform.os;
   if(!os.ios) {
     back_button.hide();
   }
 
   var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
-  var quote_div = $(x).find('.quote-text');
+  var quote_div = x.find('.quote-text');
   //Set loading quote
   quote_div.html(quote); // Default, placeholder quote.
 
@@ -343,7 +343,7 @@ App.populator('QuotesDaddy', function (page) {
 
 App.populator('About', function (page) {
   var x = $(page);
-  var back_button = $(x).find('.app-button.back.left');
+  var back_button = x.find('.app-button.back.left');
   var os = cards.utils.platform.os;
   if(!os.ios) {
     back_button.hide();
@@ -351,23 +351,24 @@ App.populator('About', function (page) {
 });
 
 
-App.populator('preview', function (page) {
-  try {
+App.populator('preview', function (page, data) {
     var x = $(page);
-    var quote = cards.kik.message.q;
+    var back_button = x.find('.app-button.back.left');
+    var quote = data.q;
 
-    var quote_div = $(x).find('.quote-text');
+    var quote_div = x.find('.quote-text');
 
     quote_div.html(quote);
 
     var os = cards.utils.platform.os;
+
     if(!os.ios) {
       back_button.hide();
     } else {
-      $(x).find('#previewHome').hide();
+      x.find('#previewHome').hide();
     }
 
-    var kik_button = $(x).find('.app-button.kik.right');
+    var kik_button = x.find('.app-button.kik.right');
 
     try {
       if(!cards.kik){
@@ -386,15 +387,11 @@ App.populator('preview', function (page) {
     } catch (e) {
       kik_button.hide();
     }
-  } catch (e) {
-    App.load('home');
-  }
 });
 
-
-//try {
-//  App.restore();
-//}
-//catch (err) {
+if(cards.kik && cards.kik.message) {
+  App.load('preview', cards.kik.message);
+  App.addToStack(0, ['home']);
+} else {
   App.load('home');
-//}
+}
