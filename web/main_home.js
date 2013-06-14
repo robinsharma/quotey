@@ -69,14 +69,13 @@ App.populator('Random', function (page) {
   // loadquote function loads the quote acquired from rss feed and displays it in the quote container
   function loadquote(q_data) {
     quote = q_data[0].description;
-    quote_div.html(quote);
+    quote_div.text(quote);
 
     //Set up kik button
     kik_button.click( function () {
       cards.kik.send({
         title : 'Quote:' ,
         text  : quote ,
-        pic   : "img/quotey_icon.png" ,
         data  : { q : q_data[0].description }
       });
     });
@@ -121,14 +120,13 @@ App.populator('Inspirational', function (page) {
   // Load the quote into quote-text
   function loadquote(q_data) {
     quote = q_data[0].description;
-    quote_div.html(quote);
+    quote_div.text(quote);
 
     //Set up kik button
     kik_button.click( function () {
       cards.kik.send({
         title : 'Quote:' ,
         text  : quote ,
-        pic   : "img/quotey_icon.png" ,
         data  : { q : q_data[0].description }
       });
     });
@@ -172,14 +170,13 @@ App.populator('Funny', function (page) {
   // Load the quote into quote-text
   function loadquote(q_data) {
     quote = q_data[0].description;
-    quote_div.html(quote);
+    quote_div.text(quote);
 
     //Set up kik button
     kik_button.click( function () {
       cards.kik.send({
         title : 'Quote:' ,
         text  : quote ,
-        pic   : "img/quotey_icon.png" ,
         data  : { q : q_data[0].description }
       });
     });
@@ -223,14 +220,13 @@ App.populator('Love', function (page) {
   // Load the quote into quote-text
   function loadquote(q_data) {
     quote = q_data[0].description;
-    quote_div.html(quote);
+    quote_div.text(quote);
 
     //Set up kik button
     kik_button.click( function () {
       cards.kik.send({
         title : 'Quote:' ,
         text  : quote ,
-        pic   : "img/quotey_icon.png" ,
         data  : { q : q_data[0].description }
       });
     });
@@ -274,14 +270,13 @@ App.populator('Friendship', function (page) {
   // Load the quote into quote-text
   function loadquote(q_data) {
     quote = q_data[0].description;
-    quote_div.html(quote);
+    quote_div.text(quote);
 
     //Set up kik button
     kik_button.click( function () {
       cards.kik.send({
         title : 'Quote:' ,
         text  : quote ,
-        pic   : "img/quotey_icon.png" ,
         data  : { q : q_data[0].description }
       });
     });
@@ -326,14 +321,13 @@ App.populator('QuotesDaddy', function (page) {
   // Load the quote into quote-text
   function loadquote(q_data) {
     quote = q_data[0].description;
-    quote_div.html(quote);
+    quote_div.text(quote);
 
     //Set up kik button
     kik_button.click( function () {
       cards.kik.send({
         title : 'Quote:' ,
         text  : quote ,
-        pic   : "img/quotey_icon.png" ,
         data  : { q : q_data[0].description }
       });
     });
@@ -352,41 +346,40 @@ App.populator('About', function (page) {
 
 
 App.populator('preview', function (page, data) {
-    var x = $(page);
-    var back_button = x.find('.app-button.back.left');
-    var quote = data.q;
+  var x = $(page);
+  var back_button = x.find('.app-button.back.left');
+  var quote = data.q;
 
-    var quote_div = x.find('.quote-text');
+  var quote_div = x.find('.quote-text');
 
-    quote_div.html(quote);
+  quote_div.text(quote);
 
-    var os = cards.utils.platform.os;
+  var os = cards.utils.platform.os;
 
-    if(!os.ios) {
-      back_button.hide();
-    } else {
-      x.find('#previewHome').hide();
-    }
+  if(!os.ios) {
+    back_button.hide();
+  } else {
+    x.find('#previewHome').hide();
+  }
 
-    var kik_button = x.find('.app-button.kik.right');
+  var kik_button = x.find('.app-button.kik.right');
 
-    try {
-      if(!cards.kik){
-        kik_button.hide();
-      } 
-      else {
-        kik_button.click( function () {
-          cards.kik.send({
-            title : 'Quote:' ,
-            text  : quote ,
-            pic   : "img/quotey_icon.png" ,
-            data  : { q : quote }
-          });
-        });
-      }
-    } catch (e) {
+  try {
+    if(!cards.kik){
       kik_button.hide();
+    } 
+    else {
+      kik_button.click( function () {
+        cards.kik.send({
+          title : 'Quote:' ,
+          text  : quote ,
+          data  : { q : quote }
+        });
+      });
     }
+  } catch (e) {
+    kik_button.hide();
+  }
 });
 
 if(cards.kik && cards.kik.message) {
