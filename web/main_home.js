@@ -358,8 +358,6 @@ App.populator('preview', function (page, data) {
 
   if(!os.ios) {
     back_button.hide();
-  } else {
-    x.find('#previewHome').hide();
   }
 
   var kik_button = x.find('.app-button.kik.right');
