@@ -1,0 +1,29 @@
+CACHE MANIFEST
+
+# zerver:js/main.min.js
+/cards.js
+/zepto.js
+/app.js
+/main_home.js
+/zerver/zAPI.js
+/zerver/inspireAPI.js
+/zerver/funnyAPI.js
+/zerver/loveAPI.js
+/zerver/friendAPI.js
+/zerver/quotesdaddyAPI.js
+/analytics.js
+# /zerver
+
+
+# zerver:css/styles.min.css
+/default.css
+/custom_quotey.css
+# /zerver
+
+/img/kik_white.png?inline=1
+
+//www.google-analytics.com/ga.js
+
+
+NETWORK:
+*

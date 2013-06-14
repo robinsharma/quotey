@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html manifest="cache.manifest">
   <head>
     <title>quotey</title>
     <link rel="kik-icon" href="img/quotey_icon.png?v=2">
 
     <!--Card Script-->
-    <script src="http://cdn.kik.com/cards/0/cards.js"></script>
     <meta name="kik-more" content="luckysharms.herokuapp.com">
     <meta name="description" content="View quotes and share them with your friends!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="default.css">
-    <link rel="stylesheet" href="custom_quotey.css">
+
+    <!-- zerver:css/styles.min.css -->
+    <link rel="stylesheet" href="/default.css">
+    <link rel="stylesheet" href="/custom_quotey.css">
+    <!-- /zerver -->
+
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300|Roboto:400,300,100' rel='stylesheet' type='text/css'>  
   </head>
 
@@ -162,18 +165,19 @@
       </div>
     </div>
 
-
-    <!-- INCLUDED JS SCRIPTS -->
-    <script src="zepto.js"></script>
-    <script src="app.js"></script>
-    <script src="main_home.js"></script>
-    <script src="zerver/zAPI.js"></script>
-    <script src="zerver/inspireAPI.js"></script>
-    <script src="zerver/funnyAPI.js"></script>
-    <script src="zerver/loveAPI.js"></script>
-    <script src="zerver/friendAPI.js"></script>
-    <script src="zerver/quotesdaddyAPI.js"></script>
-    <script src="analytics.js"></script>
+    <!-- zerver:js/main.min.js -->
+    <script src="/cards.js"></script>
+    <script src="/zepto.js"></script>
+    <script src="/app.js"></script>
+    <script src="/main_home.js"></script>
+    <script src="/zerver/zAPI.js"></script>
+    <script src="/zerver/inspireAPI.js"></script>
+    <script src="/zerver/funnyAPI.js"></script>
+    <script src="/zerver/loveAPI.js"></script>
+    <script src="/zerver/friendAPI.js"></script>
+    <script src="/zerver/quotesdaddyAPI.js"></script>
+    <script src="/analytics.js"></script>
+    <!-- /zerver -->
 
 
   </body>

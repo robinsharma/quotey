@@ -1,12 +1,12 @@
 {
   "author" : "Robin",
-  "name" : "mycard",
+  "name" : "quotey",
   "version" : "0.0.1",
   "engines" : {
     "node" : "0.8.x" ,
     "npm" : "1.1.x"
   },
   "dependencies" : {
-    "zerver" : "0.11.3"
+    "zerver" : "0.11.6"
   }
 }
