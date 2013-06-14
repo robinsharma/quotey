@@ -14,7 +14,7 @@ App.populator('home', function (page) {
  * Acquires and displays random quotes from the zAPI.js
  *
  */
-
+var init_quote = "\"<b>quotey</b> is loading...\" - luckysharms";
 App.populator('Random', function (page) {
 
   // Acquire data form feed
@@ -55,10 +55,9 @@ App.populator('Random', function (page) {
 
   // Find quote container location
   var quote_div = x.find('.quote-text');
-  var quote = "\"<b>quotey</b> is loading...\" - luckysharms";
 
-  // populate it with loading quote
-  quote_div.html(quote);
+  // populate it with loading quote or initial quote
+  quote_div.html(init_quote);
 
   // Declare/set up next quote button
   x.find('#next_quote').on('click', function() {
@@ -69,6 +68,7 @@ App.populator('Random', function (page) {
   // loadquote function loads the quote acquired from rss feed and displays it in the quote container
   function loadquote(q_data) {
     quote = q_data[0].description;
+    init_quote = quote;
     quote_div.text(quote);
 
     //Set up kik button
