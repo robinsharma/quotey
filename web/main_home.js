@@ -43,14 +43,18 @@ App.populator('Random', function (page) {
   var back_button = x.find('.app-button.back.left');
   var os = cards.utils.platform.os;
   //typeof os.name    === 'android'; // 'ios', 'android', 'osx', 'windows', etc
-  if(!os.ios) {
+  if(os.android) {
     // Hide back button if not in iOS
     back_button.hide();
   } else {
-      // Else declare its functionality
-      back_button.on('click', function() {
-        App.load('home', 'slide-right');
-      });
+    // Else declare its functionality
+    back_button.on('click', function() {
+      App.load('home', 'slide-right');
+    });
+
+    if(!os.ios) {
+      x.find('.app-title.main').css('text-align', 'center').css('padding-left', '0px');
+    }
   }
 
   // Find quote container location
@@ -100,8 +104,10 @@ App.populator('Inspirational', function (page) {
   // hide back button if not in iOS
   var back_button = x.find('.app-button.back.left');
   var os = cards.utils.platform.os;
-  if(!os.ios) {
+  if(os.android) {
     back_button.hide();
+  } else if(!os.ios) {
+    x.find('.app-title.main').css('text-align', 'center').css('padding-left', '0px');
   }
 
   var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
@@ -150,8 +156,10 @@ App.populator('Funny', function (page) {
   // hide back button if not in iOS
   var back_button = x.find('.app-button.back.left');
   var os = cards.utils.platform.os;
-  if(!os.ios) {
+  if(os.android) {
     back_button.hide();
+  } else if(!os.ios) {
+    x.find('.app-title.main').css('text-align', 'center').css('padding-left', '0px');  
   }
 
   var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
@@ -200,8 +208,10 @@ App.populator('Love', function (page) {
   // hide back button if not in iOS
   var back_button = x.find('.app-button.back.left');
   var os = cards.utils.platform.os;
-  if(!os.ios) {
+  if(os.android) {
     back_button.hide();
+  } else if(!os.ios) {
+    x.find('.app-title.main').css('text-align', 'center').css('padding-left', '0px');
   }
 
   var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
@@ -250,8 +260,10 @@ App.populator('Friendship', function (page) {
   // hide back button if not in iOS
   var back_button = x.find('.app-button.back.left');
   var os = cards.utils.platform.os;
-  if(!os.ios) {
+  if(os.android) {
     back_button.hide();
+  } else if(!os.ios) {
+    x.find('.app-title.main').css('text-align', 'center').css('padding-left', '0px');
   }
 
   var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
@@ -301,8 +313,10 @@ App.populator('QuotesDaddy', function (page) {
   // hide back button if not in iOS
   var back_button = x.find('.app-button.back.left');
   var os = cards.utils.platform.os;
-  if(!os.ios) {
+  if(os.android) {
     back_button.hide();
+  } else if(!os.ios) {
+    x.find('.app-title.main').css('text-align', 'center').css('padding-left', '0px');
   }
 
   var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
@@ -339,8 +353,10 @@ App.populator('About', function (page) {
   var x = $(page);
   var back_button = x.find('.app-button.back.left');
   var os = cards.utils.platform.os;
-  if(!os.ios) {
+  if(os.android) {
     back_button.hide();
+  } else if(!os.ios) {
+    x.find('.app-title.main').css('text-align', 'center').css('padding-left', '0px');
   }
 });
 
