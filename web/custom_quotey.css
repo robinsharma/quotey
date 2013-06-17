@@ -28,6 +28,10 @@ Copyright (C) Robin Sharma
 	/*background-image: url(../img/kik_white.png);*/
 }
 
+.app-ios .app-button.kik.right.active {
+	background-image: url(../img/kik_white.png);
+}
+
 .app-button.back.left {
 	background-image: none;
 	border: none;
