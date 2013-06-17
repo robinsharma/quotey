@@ -73,7 +73,7 @@ App.populator('Random', function (page) {
   function loadquote(q_data) {
     quote = q_data[0].description;
     init_quote = quote;
-    quote_div.text(quote);
+    quote_div.html(quote);
 
     //Set up kik button
     kik_button.click( function () {
@@ -126,7 +126,7 @@ App.populator('Inspirational', function (page) {
   // Load the quote into quote-text
   function loadquote(q_data) {
     quote = q_data[0].description;
-    quote_div.text(quote);
+    quote_div.html(quote);
 
     //Set up kik button
     kik_button.click( function () {
@@ -178,7 +178,7 @@ App.populator('Funny', function (page) {
   // Load the quote into quote-text
   function loadquote(q_data) {
     quote = q_data[0].description;
-    quote_div.text(quote);
+    quote_div.html(quote);
 
     //Set up kik button
     kik_button.click( function () {
@@ -230,7 +230,7 @@ App.populator('Love', function (page) {
   // Load the quote into quote-text
   function loadquote(q_data) {
     quote = q_data[0].description;
-    quote_div.text(quote);
+    quote_div.html(quote);
 
     //Set up kik button
     kik_button.click( function () {
@@ -282,7 +282,7 @@ App.populator('Friendship', function (page) {
   // Load the quote into quote-text
   function loadquote(q_data) {
     quote = q_data[0].description;
-    quote_div.text(quote);
+    quote_div.html(quote);
 
     //Set up kik button
     kik_button.click( function () {
@@ -335,7 +335,7 @@ App.populator('QuotesDaddy', function (page) {
   // Load the quote into quote-text
   function loadquote(q_data) {
     quote = q_data[0].description;
-    quote_div.text(quote);
+    quote_div.html(quote);
 
     //Set up kik button
     kik_button.click( function () {
@@ -368,7 +368,7 @@ App.populator('preview', function (page, data) {
 
   var quote_div = x.find('.quote-text');
 
-  quote_div.text(quote);
+  quote_div.html(quote);
 
   var os = cards.utils.platform.os;
 
