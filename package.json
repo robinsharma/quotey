@@ -7,7 +7,8 @@
     "npm" : "1.1.x"
   },
   "dependencies" : {
-    "zerver" : "0.12.9"
+    "zerver" : "0.12.9" ,
+    "feedparser" : ">=0.15.7"
   },
   "scripts" : {
   	    "start" : "zerver --manifest=cache.manifest -r web"
