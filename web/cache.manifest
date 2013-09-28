@@ -1,5 +1,7 @@
 CACHE MANIFEST
 
+# Cache Manifest Verison: 1.0
+
 # zerver:js/main.min.js
 /cards.js
 /zepto.js
