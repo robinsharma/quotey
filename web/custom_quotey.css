@@ -238,7 +238,11 @@ Copyright (C) Robin Sharma
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: auto 30px;
-	border: none;
+	border: 0px;
+}
+
+.app-ios .app-button.kik.right {
+	background-size: 44px;
 }
 
 .app-button.kik.right.active {
@@ -247,6 +251,10 @@ Copyright (C) Robin Sharma
 	background-size: auto 30px;
 
 	background-color: #191919;
+}
+
+.app-ios .app-button.kik.right.active {
+	background-size: 44px;
 }
 
 .app-ios .app-button.kik.right.active {
