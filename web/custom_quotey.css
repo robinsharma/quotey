@@ -7,6 +7,16 @@ Custom CSS for the Quotey Card!
 Copyright (C) Robin Sharma
 */
 
+.app-android {
+	font-family: 'Open Sans';
+	font-weight: 300;
+}
+
+.app-ios {
+	font-family: 'Helvetica Neue', 'Open Sans';
+	font-weight: 100;
+}
+
 .app-page {
 	padding-bottom: 10px;
 	background: white;
@@ -101,7 +111,7 @@ Copyright (C) Robin Sharma
 .app-topbar.main {
 	background: #FFF;
 	box-shadow: none;
-	font-family: 'Helvetica Neue', 'Open-Sans';
+	font-family: 'Helvetica Neue', 'Open Sans';
 	font-weight: 300;
 	text-decoration: none;
 	text-shadow: none;
@@ -111,7 +121,7 @@ Copyright (C) Robin Sharma
 	font-size: 32px;
 	background: #FFF;
 	box-shadow: none;
-	font-family: 'Helvetica Neue', 'Open-Sans';
+	font-family: 'Helvetica Neue', 'Open Sans';
 	font-weight: 300;
 	padding:8px 0px;
 	text-decoration: none;
@@ -121,6 +131,13 @@ Copyright (C) Robin Sharma
 
 .app-ios .app-title {
 	font-weight: 100;
+}
+
+.app-android .app-topbar .app-title {
+	padding: 0px;
+	padding-left: 10px;
+	font-family: 'Open Sans';
+	font-weight: 300;
 }
 
 
@@ -152,7 +169,7 @@ Copyright (C) Robin Sharma
 
 
 .app-section.quote-section{
-	font-family: 'Helvetica Neue','Open-Sans';
+	font-family: 'Helvetica Neue','Open Sans';
 	font-weight: 300;
 	background: #FFF;
 }
@@ -169,6 +186,7 @@ Copyright (C) Robin Sharma
 	padding: 8px;
 	font-weight: 200;
 	font-size: 20px;
+
 }
 
 .app-section.quote-section.inspire{
@@ -190,6 +208,12 @@ Copyright (C) Robin Sharma
 .quote-text {
 	padding: 20px;
 	font-size: 40px;
+}
+
+.app-android .quote-text {
+	font-family: 'Open Sans';
+	font-weight: 300;
+	padding: 6px 15px 15px 15px;
 }
 
 .app-ios .quote-text {
