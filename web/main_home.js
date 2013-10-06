@@ -65,20 +65,20 @@ App.populator('r_quotes', function (page) {
   var prev = x.find('#prev_quote');
   var next = x.find('#next_quote');
   prev.disabled = true;
-  prev.css('color', 'rgb(226, 226, 226');   
+  prev.hide();   
 
   prev.on('click', function() {
     next.disabled = false;
-    next.css('background', 'rgb(255, 255, 255');   
+    next.show();   
     if (index == 1) {
       index -= 1;
       prev.disabled = true;
-      prev.css('background', 'rgb(226, 226, 226');    
+      prev.hide();    
     }
 
     else if (index != 0){
       prev.disabled = false;
-      prev.css('background', 'rgb(255, 255, 255');   
+      prev.show();   
       index -= 1;
     }
     loadquote();
@@ -86,16 +86,16 @@ App.populator('r_quotes', function (page) {
 
   next.on('click', function() {
     prev.disabled = false;
-    prev.css('background', 'rgb(255, 255, 255'); 
+    prev.show(); 
     if (index == 23) {
       index += 1;
       next.disabled = true;
-      next.css('background', 'rgb(226, 226, 226');    
+      next.hide();    
     }
 
     else if (index != 24){
-      next.disabled = true;
-      next.css('background', 'rgb(255, 255, 255');   
+      next.disabled = false;
+      next.show();   
       index += 1;
     }
     loadquote();
