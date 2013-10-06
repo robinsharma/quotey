@@ -58,10 +58,6 @@ Copyright (C) Robin Sharma
 
 }
 
-.app-ios .app-button.home {
-	font-weight: 300;
-}
-
 .app-android .app-button.home {
 	font-size: 24px;
 }
@@ -197,20 +193,25 @@ Copyright (C) Robin Sharma
 
 }
 
-.app-section.quote-section.inspire{
+.app-section.quote-section.inspire {
+	color: #D83940;
 }
 
 
 .app-section.quote-section.funny {
+	color: #00B16A;
 }
 
 .app-section.quote-section.love {
+	color: #5500B1;
 }
 
 .app-section.quote-section.friendship {
+	color: #0070FF;
 }
 
 .app-section.quote-section.quotesdaddy {
+	color: #686868;
 }
 
 .quote-text {
