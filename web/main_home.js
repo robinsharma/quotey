@@ -70,23 +70,21 @@ App.populator('r_quotes', function (page) {
 
   prev.on('click', function() {
     next.disabled = false;
-    next.show();   
+    next.show();
+    if (flag == 1) {
+      index -= 1;
+      flag = 0;
+    }   
     if (index == 1) {
       index -= 1;
       prev.disabled = true;
       prev.hide();    
     }
 
-    if (flag == 1) {
-      index -= 1;
-      flag
-    }
-
     else if (index != 0){
       prev.disabled = false;
       prev.show();   
       index -= 1;
-      flag = 0;
     }
     loadquote();
   }); 
