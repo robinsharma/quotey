@@ -103,6 +103,9 @@ App.populator('Inspirational', function (page) {
 
   // hide back button if not in iOS
   var back_button = x.find('.app-button.back.left');
+  back_button.on('click', function() {
+    App.load('home', 'slide-right');
+  });
   var os = cards.utils.platform.os;
   if(os.android) {
     back_button.hide();
@@ -155,6 +158,9 @@ App.populator('Funny', function (page) {
 
   // hide back button if not in iOS
   var back_button = x.find('.app-button.back.left');
+  back_button.on('click', function() {
+    App.load('home', 'slide-right');
+  });
   var os = cards.utils.platform.os;
   if(os.android) {
     back_button.hide();
@@ -207,6 +213,9 @@ App.populator('Love', function (page) {
 
   // hide back button if not in iOS
   var back_button = x.find('.app-button.back.left');
+  back_button.on('click', function() {
+    App.load('home', 'slide-right');
+  });
   var os = cards.utils.platform.os;
   if(os.android) {
     back_button.hide();
@@ -259,6 +268,9 @@ App.populator('Friendship', function (page) {
 
   // hide back button if not in iOS
   var back_button = x.find('.app-button.back.left');
+  back_button.on('click', function() {
+    App.load('home', 'slide-right');
+  });
   var os = cards.utils.platform.os;
   if(os.android) {
     back_button.hide();
@@ -312,6 +324,9 @@ App.populator('QuotesDaddy', function (page) {
 
   // hide back button if not in iOS
   var back_button = x.find('.app-button.back.left');
+  back_button.on('click', function() {
+    App.load('home', 'slide-right');
+  });
   var os = cards.utils.platform.os;
   if(os.android) {
     back_button.hide();
@@ -352,6 +367,9 @@ App.populator('QuotesDaddy', function (page) {
 App.populator('About', function (page) {
   var x = $(page);
   var back_button = x.find('.app-button.back.left');
+  back_button.on('click', function() {
+    App.load('home', 'slide-right');
+  });
   var os = cards.utils.platform.os;
   if(os.android) {
     back_button.hide();

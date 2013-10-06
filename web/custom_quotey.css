@@ -7,12 +7,21 @@ Custom CSS for the Quotey Card!
 Copyright (C) Robin Sharma
 */
 
+.app-ios {
+	font-weight: 100;
+}
+
+.app-android {
+	font-weight: 300;
+}
+
 .app-content {
 	background: white;
 }
 .app-section {
 	margin: 0px;
-	border-bottom: none;
+	border-bottom: 0px;
+	border-radius: 0px;
 }
 
 .app-section.home {
@@ -22,23 +31,22 @@ Copyright (C) Robin Sharma
 
 .home-text {
 	font-family: 'Helvetica Neue', 'Open Sans';
-	font-weight: 300;
 	text-align: center;
 	font-size: 52px;
 	color: black;
 }
 
 
+
 .app-button.home {
 	font-family: 'Helvetica Neue', 'Open Sans';
-	font-weight: 300;
 	font-size: 21px;
 	padding: 8px;
 
 }
 
 .app-button.home.random {
-	color: #519c42;
+	color: #1DC560;
 }
 
 .app-button.home.inspire {
@@ -61,12 +69,121 @@ Copyright (C) Robin Sharma
 	color: #DF3E3E;
 }
 
-.app-ios .home-text {
-	font-weight: 100;
-} 
+
 
 .app-button.kik {
 	width: 10%;
+}
+
+
+
+.app-ios .app-topbar .app-button {
+	background-image: none;
+	border: none;
+	border-radius: 0px;
+	font-family: 'Helvetica Neue';
+	font-weight: 200;
+}
+
+.app-ios .app-topbar .app-button.active {
+	background-color: rgba(100, 100, 100, 0.05);
+}
+
+.app-ios .app-topbar .app-button[data-back] {
+
+}
+
+.app-topbar.main {
+	background: #FFF;
+	box-shadow: none;
+	font-family: 'Helvetica Neue', 'Open-Sans';
+	font-weight: 300;
+	text-decoration: none;
+	text-shadow: none;
+}
+
+.app-title {
+	font-size: 32px;
+}
+
+.app-ios .app-topbar.main {
+	font-weight: 100;
+}
+
+
+.app-topbar.main.about {
+	font-color: black;
+}
+
+.app-topbar.main.inspire{
+}
+
+.app-topbar.main.random {
+	color: #1DC560;
+}
+
+.app-topbar.main.funny {
+}
+
+.app-topbar.main.love {
+}
+
+.app-topbar.main.friendship {
+}
+
+.app-topbar.main.quotesdaddy {
+}
+
+/* Set app title to center*/
+
+
+
+.app-section.quote-section{
+	font-family: 'Helvetica Neue','Open-Sans';
+	font-weight: 300;
+	background: #FFF;
+}
+
+.app-ios .app-section.quote-section {
+	font-weight: 100;
+}
+
+.app-section.quote-section.inspire{
+}
+
+.app-section.quote-section.random {
+}
+
+.app-section.quote-section.funny {
+}
+
+.app-section.quote-section.love {
+}
+
+.app-section.quote-section.friendship {
+}
+
+.app-section.quote-section.quotesdaddy {
+}
+
+.quote-text {
+	padding: 20px;
+	font-size: 40px;
+	color: #000; /* originally #DDD */
+}
+
+
+.about-text {
+	padding: 10px;
+	font-size: 32px;
+	font-weight: 100;
+	color: #333;
+}
+
+.app-ios .about-text {
+	font-family: "Open Sans";
+	font-weight: 300;
+	font-size: 25px;
 }
 
 .app-button.kik.right {
@@ -88,142 +205,4 @@ Copyright (C) Robin Sharma
 
 .app-ios .app-button.kik.right.active {
 	background-image: url(../img/kik_white.png);
-}
-
-.app-button.back.left {
-	background-image: none;
-	border: none;
-}
-
-.app-topbar.main {
-	z-index: 3000;
-	position: relative;
-	height: 44px;
-	width: 100%;
-	background: #000;
-	color: #FFF; /* orginially #DDD */
-	box-shadow: none;
-	text-decoration: none;
-	text-shadow: none;
-}
-
-.app-android .app-topbar.main {
-	height: 48px
-}
-
-.app-topbar.main.about {
-	background: #000;
-	font-color: black;
-}
-
-.app-topbar.main.inspire{
-	background: #ce3f39;
-}
-
-.app-topbar.main.random {
-	background: #519c42;
-}
-
-.app-topbar.main.funny {
-	background: #019987;
-}
-
-.app-topbar.main.love {
-	background: #b56cc7;
-}
-
-.app-topbar.main.friendship {
-	background: #b94914;
-}
-
-.app-topbar.main.quotesdaddy {
-	background: #727272;
-}
-
-.app-title.main {
-	margin: 0 auto;
-	padding-left: 10px;
-	height: 100%;
-	width: 100%;
-	font-weight: 100;
-	font-size: 32px;
-	line-height: 44px;
-	text-align: left;
-	overflow: hidden;
-	white-space: nowrap
-}
-/* Set app title to center*/
-.app-ios .app-title.main {
-	text-align: center;
-	padding-left: 0px;
-}
-
-.app-android .app-title.main {
-	line-height: 48px;
-	font-family: "Roboto";
-}
-
-.app-ios .app-title.main {
-	font-weight: 300px;
-	font-family: "Open Sans";
-}
-
-
-.app-section.quote-section{
-	font-family: "Helvetica Neue",'Roboto', sans-serif;
-	background: #222;
-}
-
-.app-section.quote-section.inspire{
-	background: #29a4af;
-}
-
-.app-section.quote-section.random {
-	background: #dd6c14;
-}
-
-.app-section.quote-section.funny {
-	background: #236c9c;
-}
-
-.app-section.quote-section.love {
-	background: #c435a1;
-}
-
-.app-section.quote-section.friendship {
-	background: #1484b9;
-}
-
-.app-section.quote-section.quotesdaddy {
-	background: #313131;
-}
-
-.quote-text {
-	padding: 10px;
-	font-size: 40px;
-	font-weight: 100;
-	color: #FFF; /* originally #DDD */
-}
-
-.app-ios .quote-text {
-	font-family: "Open Sans";
-	font-size: 36px;
-	font-weight: 300;
-}
-
-.app-android .quote-text {
-	font-family: "Roboto";
-}
-
-.about-text {
-	padding: 10px;
-	font-size: 32px;
-	font-weight: 100;
-	color: #333;
-}
-
-.app-ios .about-text {
-	font-family: "Open Sans";
-	font-weight: 300;
-	font-size: 25px;
 }
