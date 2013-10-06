@@ -7,7 +7,10 @@ Custom CSS for the Quotey Card!
 Copyright (C) Robin Sharma
 */
 
-
+.app-page {
+	padding-bottom: 10px;
+	background: white;
+}
 .app-content {
 	background: white;
 }
@@ -34,12 +37,20 @@ Copyright (C) Robin Sharma
 	font-weight: 100;
 } 
 
+.app-android .home-text {
+	font-size: 60px;
+}
+
 .app-button.home {
 	font-family: 'Helvetica Neue', 'Open Sans';
 	font-weight: 300;
 	font-size: 21px;
 	padding: 8px;
 
+}
+
+.app-android .app-button.home {
+	font-size: 32px;
 }
 
 .app-button.home.random {
@@ -80,14 +91,11 @@ Copyright (C) Robin Sharma
 	border-radius: 0px;
 	font-family: 'Helvetica Neue';
 	font-weight: 200;
+	margin: 17px 17px;
 }
 
 .app-ios .app-topbar .app-button.active {
 	background-color: rgba(100, 100, 100, 0.05);
-}
-
-.app-ios .app-topbar .app-button[data-back] {
-
 }
 
 .app-topbar.main {
@@ -99,11 +107,19 @@ Copyright (C) Robin Sharma
 	text-shadow: none;
 }
 
-.app-title {
+.app-topbar .app-title {
 	font-size: 32px;
+	background: #FFF;
+	box-shadow: none;
+	font-family: 'Helvetica Neue', 'Open-Sans';
+	font-weight: 300;
+	padding:8px 0px;
+	text-decoration: none;
+	text-shadow: none;
+
 }
 
-.app-ios .app-topbar.main {
+.app-ios .app-title {
 	font-weight: 100;
 }
 
@@ -145,11 +161,19 @@ Copyright (C) Robin Sharma
 	font-weight: 100;
 }
 
+.app-section.quote-section.random {
+	color: #FF7000;
+}
+
+.app-button.reload {
+	padding: 8px;
+	font-weight: 200;
+	font-size: 20px;
+}
+
 .app-section.quote-section.inspire{
 }
 
-.app-section.quote-section.random {
-}
 
 .app-section.quote-section.funny {
 }
@@ -166,7 +190,10 @@ Copyright (C) Robin Sharma
 .quote-text {
 	padding: 20px;
 	font-size: 40px;
-	color: #000; /* originally #DDD */
+}
+
+.app-ios .quote-text {
+	font-size: 38px;
 }
 
 
