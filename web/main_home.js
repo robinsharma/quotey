@@ -11,6 +11,7 @@ App.populator('home', function (page) {
 var index = 0;
 var init_quote1 = "\"and that, ladies and gentlemen, was when quotey started loading...\"";
 var global_quotes = "";
+var flag = 0;
 App.populator('r_quotes', function (page) {
 
 // Acquire data form feed
@@ -76,10 +77,16 @@ App.populator('r_quotes', function (page) {
       prev.hide();    
     }
 
+    if (flag == 1) {
+      index -= 1;
+      flag
+    }
+
     else if (index != 0){
       prev.disabled = false;
       prev.show();   
       index -= 1;
+      flag = 0;
     }
     loadquote();
   }); 
@@ -117,6 +124,7 @@ App.populator('r_quotes', function (page) {
     while (check == true && infinite_loop_prevent < 2){
       if (index < 25) {
         index += 1;
+        flag = 1;
       }
       else {
         index = 0
