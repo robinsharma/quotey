@@ -7,6 +7,40 @@ Custom CSS for the Quotey Card!
 Copyright (C) Robin Sharma
 */
 
+.app-content {
+	background: white;
+}
+.app-section {
+	margin: 0px;
+	border-bottom: none;
+}
+
+.app-section.home {
+	background: white;
+	padding: 42px;
+}
+
+.home-text {
+	font-family: 'Helvetica Neue', 'Open Sans';
+	font-weight: 300;
+	text-align: center;
+	font-size: 52px;
+	color: black;
+}
+
+
+.app-button.home {
+	font-family: 'Helvetica Neue', 'Open Sans';
+	font-weight: 300;
+	font-size: 21px;
+	padding: 8px;
+
+}
+
+.app-ios .home-text {
+	font-weight: 100;
+} 
+
 .app-button.kik {
 	width: 10%;
 }
