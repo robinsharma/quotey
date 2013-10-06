@@ -8,8 +8,8 @@ Copyright (C) Robin Sharma
 */
 
 .app-android {
-	font-family: 'Open Sans';
-	font-weight: 300;
+	font-family: 'Roboto';
+	font-weight: 100;
 }
 
 .app-ios {
@@ -35,8 +35,8 @@ Copyright (C) Robin Sharma
 }
 
 .home-text {
-	font-family: 'Helvetica Neue', 'Open Sans';
-	font-weight: 300;
+	font-family: 'Helvetica Neue', 'Roboto', 'Open Sans';
+	font-weight: 100;
 	text-align: center;
 	font-size: 52px;
 	color: black;
@@ -51,15 +51,23 @@ Copyright (C) Robin Sharma
 }
 
 .app-button.home {
-	font-family: 'Helvetica Neue', 'Open Sans';
+	font-family: 'Helvetica Neue', 'Roboto', 'Open Sans';
 	font-weight: 300;
 	font-size: 21px;
 	padding: 8px;
 
 }
 
+.app-ios .app-button.home {
+	font-weight: 300;
+}
+
 .app-android .app-button.home {
 	font-size: 24px;
+}
+
+.app-button.home.r_quotes {
+	color: #00C8EE;
 }
 
 .app-button.home.random {
@@ -105,8 +113,8 @@ Copyright (C) Robin Sharma
 .app-topbar.main {
 	background: #FFF;
 	box-shadow: none;
-	font-family: 'Helvetica Neue', 'Open Sans';
-	font-weight: 300;
+	font-family: 'Helvetica Neue', 'Roboto', 'Open Sans';
+	font-weight: 100;
 	text-decoration: none;
 	text-shadow: none;
 }
@@ -115,66 +123,71 @@ Copyright (C) Robin Sharma
 	font-size: 32px;
 	background: #FFF;
 	box-shadow: none;
-	font-family: 'Helvetica Neue', 'Open Sans';
-	font-weight: 300;
+	font-family: 'Helvetica Neue', 'Roboto', 'Open Sans';
+	font-weight: 100;
 	padding:8px 0px;
 	text-decoration: none;
 	text-shadow: none;
 
 }
 
-.app-ios .app-title {
-	font-weight: 100;
-}
 
 .app-android .app-topbar .app-title {
 	padding: 0px;
 	padding-left: 10px;
-	font-family: 'Open Sans';
+	font-family: 'Roboto', 'Open Sans';
 	font-size: 36px;
-	font-weight: 300;
+	font-weight: 100;
 }
 
 
-.app-topbar.main.about {
-	font-color: black;
-}
+.app-topbar.main.r_quotes {
+	color: #00C8EE;
 
-.app-topbar.main.inspire{
 }
 
 .app-topbar.main.random {
 	color: #1DC560;
 }
 
+.app-topbar.main.inspire {
+	color: #29a4af;
+}
+
 .app-topbar.main.funny {
+	color: #236c9c;
 }
 
 .app-topbar.main.love {
+	color: #c435a1;
 }
 
 .app-topbar.main.friendship {
+	color: #b94914;
 }
 
 .app-topbar.main.quotesdaddy {
+	color: #DF3E3E;
 }
 
-/* Set app title to center*/
+.app-topbar.main.about {
+	color: black;
+}
 
 
 
 .app-section.quote-section{
-	font-family: 'Helvetica Neue','Open Sans';
-	font-weight: 300;
+	font-family: 'Helvetica Neue', 'Roboto', 'Open Sans';
+	font-weight: 100;
 	background: #FFF;
 }
 
-.app-ios .app-section.quote-section {
-	font-weight: 100;
+.app-section.quote-section.r_quotes {
+	color: #FF7000;
 }
 
 .app-section.quote-section.random {
-	color: #FF7000;
+	color: #00A3B1;
 }
 
 .app-button.reload {
@@ -206,8 +219,8 @@ Copyright (C) Robin Sharma
 }
 
 .app-android .quote-text {
-	font-family: 'Open Sans';
-	font-weight: 300;
+	font-family: 'Roboto';
+	font-weight: 100;
 	padding: 6px 15px 15px 15px;
 }
 
@@ -217,16 +230,15 @@ Copyright (C) Robin Sharma
 
 
 .about-text {
-	padding: 10px;
+	padding: 20px;
 	font-size: 32px;
+	font-family: 'Helvetica Neue', 'Roboto', 'Open Sans';
 	font-weight: 100;
 	color: #333;
 }
 
 .app-ios .about-text {
-	font-family: "Open Sans";
-	font-weight: 300;
-	font-size: 25px;
+	font-weight: 100;
 }
 
 .app-button.kik {

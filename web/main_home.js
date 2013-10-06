@@ -72,7 +72,7 @@ App.populator('r_quotes', function (page) {
     next.disabled = false;
     next.show();
     if (flag == 1) {
-      index -= 1;
+      index -= (1*flag);
       flag = 0;
     }   
     if (index == 1) {
@@ -122,7 +122,7 @@ App.populator('r_quotes', function (page) {
     while (check == true && infinite_loop_prevent < 2){
       if (index < 25) {
         index += 1;
-        flag = 1;
+        flag += 1;
       }
       else {
         index = 0
