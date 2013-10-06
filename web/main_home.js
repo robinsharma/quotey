@@ -65,7 +65,7 @@ App.populator('r_quotes', function (page) {
   var prev = x.find('#prev_quote');
   var next = x.find('#next_quote');
   prev.disabled = true;
-  prev.css('background', 'rgb(0, 0, 0');   
+  prev.css('color', 'rgb(226, 226, 226');   
 
   prev.on('click', function() {
     next.disabled = false;
