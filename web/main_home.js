@@ -8,6 +8,86 @@ App.populator('home', function (page) {
   //changing colours?
 });
 
+var index = 0;
+App.populator('r_quotes', function (page) {
+
+  // Acquire data form feed
+  cards.ready(function (){
+    r_quotesAPI.getData(function(meta, quotes_data){
+      if(quotes_data){
+        loadquote(quotes_data);
+      }
+    });
+  });
+
+  var x = $(page); // set r_quotes HTML page to variable x
+
+  // Find kik button
+  var kik_button = x.find('.app-button.kik.right');
+  
+  // hide the kik button if opened in broswer and not kik
+  try {
+    if(!cards.kik){
+      kik_button.hide();
+    }
+  } catch (e) {
+    kik_button.hide();
+  }
+
+  var back_button = x.find('.app-button.back.left');
+  var os = cards.utils.platform.os;
+  //typeof os.name    === 'android'; // 'ios', 'android', 'osx', 'windows', etc
+  if(os.android) {
+    // Hide back button if not in iOS
+    back_button.hide();
+  } else {
+    // Else declare its functionality
+    back_button.on('click', function() {
+      App.load('home', 'slide-right');
+    });
+
+    if(!os.ios) {
+      x.find('.app-title.main').css('text-align', 'center').css('padding-left', '0px');
+    }
+  }
+
+  // Find quote container location
+  var quote_div = x.find('.quote-text');
+
+  // populate it with loading quote or initial quote
+  quote_div.html(init_quote);
+
+  // Declare/set up next quote button
+  x.find('#next_quote').on('click', function() {
+    if (index < 25) {
+      index += 1;
+    }
+
+    else {
+      index = 0;
+    }
+    App.load('r_quotes', 'fade');
+    App.removeFromStack(-1);
+  }); 
+
+  // loadquote function loads the quote acquired from rss feed and displays it in the quote container
+  function loadquote(q_data) {
+    quote = q_data[index].title;
+    init_quote = quote;
+    quote_div.html(quote);
+
+    //Set up kik button
+    kik_button.click( function () {
+      cards.kik.send({
+        title : 'Quote:' ,
+        text  : quote ,
+        data  : { q : quote }
+      });
+    });
+  }
+
+});
+
 /*
  * Random Quotes Page populator
  * 

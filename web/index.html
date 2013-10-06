@@ -26,6 +26,7 @@
           <div class="home-text">quotey</div>
         </div>
         <div class="app-section">
+          <div class="app-button home random" data-target="r_quotes">/r/quotes</div>
           <div class="app-button home random" data-target="Random">Random</div>
           <div class="app-button home inspire" data-target="Inspirational">Inspirational</div>
           <div class="app-button home funny" data-target="Funny">Funny</div>
@@ -50,6 +51,23 @@
             <hr>
             The quotes found in <b>quotey</b> are courtesy of QuotesDaddy.com.
           </div>
+        </div>
+      </div>
+    </div>
+
+     <div class="app-page" data-page="r_quotes">
+      <div class="app-topbar main random">
+        <div class="app-button kik right" data-clickable-class="active" style="-webkit-tap-highlight-color: rgba(255, 255, 255, 0);"></div>
+        <div class="app-title main">quotey</div>
+        <div class="app-button back left">Back</div>
+
+      </div>
+      <div class="app-content">
+        <div class="app-section quote-section random">
+          <div class="quote-text"></div>
+        </div>
+        <div class="app-section">
+          <div class="app-button reload" id="next_quote">Reload</div>
         </div>
       </div>
     </div>
@@ -165,6 +183,7 @@
     <script src="/zerver/loveAPI.js"></script>
     <script src="/zerver/friendAPI.js"></script>
     <script src="/zerver/quotesdaddyAPI.js"></script>
+    <script src="/zerver/r_quotesAPI.js"></script>
     <script src="/analytics.js"></script>
     <!-- /zerver -->
 
