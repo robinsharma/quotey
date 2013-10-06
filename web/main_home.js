@@ -13,17 +13,16 @@ var init_quote1 = "\"and that, ladies and gentlemen, was when quotey started loa
 var global_quotes = "";
 App.populator('r_quotes', function (page) {
 
-  // Acquire data form feed
-  if (index == 0) {
-    cards.ready(function (){
-      r_quotesAPI.getData(function(meta, quotes_data){
-        if(quotes_data){
-          global_quotes = quotes_data;
-          loadquote();
-        }
-      });
+// Acquire data form feed
+  cards.ready(function (){
+    r_quotesAPI.getData(function(meta, quotes_data){
+      if(quotes_data){
+        global_quotes = quotes_data;
+        loadquote();
+      }
     });
-}
+  });
+
 
   var x = $(page); // set r_quotes HTML page to variable x
 
@@ -63,18 +62,51 @@ App.populator('r_quotes', function (page) {
   quote_div.html(init_quote1);
 
   // Declare/set up next quote button
-  x.find('#next_quote').on('click', function() {
-    if (index < 24) {
-      index += 1;
+  var prev = x.find('#prev_quote');
+  var next = x.find('#next_quote');
+  prev.disabled = true;
+  prev.css('background', 'rgb(226, 226, 226');   
+
+  prev.on('click', function() {
+    next.disabled = false;
+    next.css('background', 'rgb(255, 255, 255');   
+    if (index == 1) {
+      index -= 1;
+      prev.disabled = true;
+      prev.css('background', 'rgb(226, 226, 226');    
     }
 
-    else {
-      index = 0;
-      App.load('r_quotes', 'fade');
-      App.removeFromStack(-1);
+    else if (index != 0){
+      prev.disabled = false;
+      prev.css('background', 'rgb(255, 255, 255');   
+      index -= 1;
     }
     loadquote();
   }); 
+
+  next.on('click', function() {
+    prev.disabled = false;
+    prev.css('background', 'rgb(255, 255, 255'); 
+    if (index == 23) {
+      index += 1;
+      next.disabled = true;
+      next.css('background', 'rgb(226, 226, 226');    
+    }
+
+    else if (index != 24){
+      next.disabled = true;
+      next.css('background', 'rgb(255, 255, 255');   
+      index += 1;
+    }
+    loadquote();
+  }); 
+
+  x.find('#reload_quote').on('click', function() {
+    index = 0;
+    init_quote1 = "\"and that, ladies and gentlemen, was when quotey started loading...\"";
+    App.load('r_quotes', 'fade');
+    App.removeFromStack(-1);
+  });
 
   // loadquote function loads the quote acquired from rss feed and displays it in the quote container
   function loadquote() {
