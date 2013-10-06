@@ -9,16 +9,21 @@ App.populator('home', function (page) {
 });
 
 var index = 0;
+var init_quote1 = "\"and that, ladies and gentlemen, was when quotey started loading...\"";
+var global_quotes = "";
 App.populator('r_quotes', function (page) {
 
   // Acquire data form feed
-  cards.ready(function (){
-    r_quotesAPI.getData(function(meta, quotes_data){
-      if(quotes_data){
-        loadquote(quotes_data);
-      }
+  if (index == 0) {
+    cards.ready(function (){
+      r_quotesAPI.getData(function(meta, quotes_data){
+        if(quotes_data){
+          global_quotes = quotes_data;
+          loadquote();
+        }
+      });
     });
-  });
+}
 
   var x = $(page); // set r_quotes HTML page to variable x
 
@@ -55,32 +60,40 @@ App.populator('r_quotes', function (page) {
   var quote_div = x.find('.quote-text');
 
   // populate it with loading quote or initial quote
-  quote_div.html(init_quote);
+  quote_div.html(init_quote1);
 
   // Declare/set up next quote button
   x.find('#next_quote').on('click', function() {
-    if (index < 25) {
+    if (index < 24) {
       index += 1;
     }
 
     else {
       index = 0;
+      App.load('r_quotes', 'fade');
+      App.removeFromStack(-1);
     }
-    App.load('r_quotes', 'fade');
-    App.removeFromStack(-1);
+    loadquote();
   }); 
 
   // loadquote function loads the quote acquired from rss feed and displays it in the quote container
-  function loadquote(q_data) {
-    quote = q_data[index].title;
+  function loadquote() {
+    quote = global_quotes[index].title;
     var regexNum = /\d/g;
     var check = regexNum.test(quote);
-    while (check == true && index < 24 ){
-      index += 1;
-      quote = q_data[index].title;
+    var infinite_loop_prevent = 0;
+    while (check == true && infinite_loop_prevent < 2){
+      if (index < 25) {
+        index += 1;
+      }
+      else {
+        index = 0
+        infinite_loop_prevent += 1;
+      }
+      quote = global_quotes[index].title;
       check = regexNum.test(quote);
     }
-    init_quote = quote;
+    init_quote1 = quote;
     quote_div.html(quote);
 
     //Set up kik button
