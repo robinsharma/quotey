@@ -37,6 +37,30 @@ Copyright (C) Robin Sharma
 
 }
 
+.app-button.home.random {
+	color: #519c42;
+}
+
+.app-button.home.inspire {
+	color: #29a4af;
+}
+
+.app-button.home.funny {
+	color: #236c9c;
+}
+
+.app-button.home.love {
+	color: #c435a1;
+}
+
+.app-button.home.friendship {
+	color: #b94914;
+}
+
+.app-button.home.qdu {
+	color: #DF3E3E;
+}
+
 .app-ios .home-text {
 	font-weight: 100;
 } 
