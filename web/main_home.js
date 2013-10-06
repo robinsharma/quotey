@@ -73,6 +73,13 @@ App.populator('r_quotes', function (page) {
   // loadquote function loads the quote acquired from rss feed and displays it in the quote container
   function loadquote(q_data) {
     quote = q_data[index].title;
+    var regexNum = /\d/g;
+    var check = regexNum.test(quote);
+    while (check == true && index < 24 ){
+      index += 1;
+      quote = q_data[index].title;
+      check = regexNum.test(quote);
+    }
     init_quote = quote;
     quote_div.html(quote);
 

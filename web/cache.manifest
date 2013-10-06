@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-# Cache Manifest Verison: 1.0.0
+# Cache Manifest Verison: 1.0.1
 
 # zerver:js/main.min.js
 /cards.js
@@ -13,6 +13,7 @@ CACHE MANIFEST
 /zerver/loveAPI.js
 /zerver/friendAPI.js
 /zerver/quotesdaddyAPI.js
+/zerver/r_quotesAPI.js
 /analytics.js
 # /zerver
 
