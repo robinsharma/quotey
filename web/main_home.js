@@ -116,10 +116,10 @@ App.populator('r_quotes', function (page) {
   // loadquote function loads the quote acquired from rss feed and displays it in the quote container
   function loadquote() {
     quote = global_quotes[index].title;
-    var regexNum = /\d/g;
-    var check = regexNum.test(quote);
+    //var regexNum = /\d/g;
+    var check = quote.indexOf("quotes");
     var infinite_loop_prevent = 0;
-    while (check == true && infinite_loop_prevent < 2){
+    while (check > -1 && infinite_loop_prevent < 2){
       if (index < 25) {
         index += 1;
         flag += 1;
@@ -129,7 +129,7 @@ App.populator('r_quotes', function (page) {
         infinite_loop_prevent += 1;
       }
       quote = global_quotes[index].title;
-      check = regexNum.test(quote);
+      var check = quote.indexOf("quotes");
     }
     init_quote1 = quote;
     quote_div.html(quote);
