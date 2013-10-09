@@ -232,7 +232,7 @@ Copyright (C) Robin Sharma
 
 .about-text {
 	padding: 20px;
-	font-size: 32px;
+	font-size: 24px;
 	font-family: 'Helvetica Neue', 'Roboto', 'Open Sans';
 	font-weight: 100;
 	color: #333;
@@ -242,6 +242,24 @@ Copyright (C) Robin Sharma
 	font-weight: 100;
 }
 
+.app-topbar .app-button.kik {
+	background-image: none;
+	border: none;
+	border-radius: 0px;
+	font-family: 'Helvetica Neue';
+	font-weight: 200;
+	margin: 17px 17px;
+}
+
+.app-android .app-topbar .app-button.kik {
+	margin: 4px 7px;
+}
+
+.app-topbar .app-button.active {
+	background-color: rgba(100, 100, 100, 0.05);
+}
+
+/*
 .app-button.kik {
 	width: 10%;
 }
@@ -273,3 +291,4 @@ Copyright (C) Robin Sharma
 .app-ios .app-button.kik.right.active {
 	background-image: url(../img/kik_it.png);
 }
+*/
