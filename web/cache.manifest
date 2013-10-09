@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-# Cache Manifest Verison: 1.0.1
+# Cache Manifest Verison: 1.0.2
 
 # zerver:js/main.min.js
 /cards.js
@@ -23,7 +23,6 @@ CACHE MANIFEST
 /custom_quotey.css
 # /zerver
 
-/img/kik_it.png?inline=1
 
 //www.google-analytics.com/ga.js
 

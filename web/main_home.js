@@ -152,7 +152,7 @@ App.populator('r_quotes', function (page) {
  * Acquires and displays random quotes from the zAPI.js
  *
  */
-var init_quote = "\"<b>quotey</b> is loading...\" - luckysharms";
+var init_quote = "\"quotey would like to load now...\" - luckysharms";
 App.populator('Random', function (page) {
 
   // Acquire data form feed
@@ -251,7 +251,7 @@ App.populator('Inspirational', function (page) {
     x.find('.app-title.main').css('text-align', 'center').css('padding-left', '0px');
   }
 
-  var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
+  var quote = "\"And on the eleventh day quotey was loading...\" - luckysharms"; // find the location on the page where the quote will go
   var quote_div = x.find('.quote-text');
   //Set loading quote
   quote_div.html(quote); // Default, placeholder quote.
@@ -306,7 +306,7 @@ App.populator('Funny', function (page) {
     x.find('.app-title.main').css('text-align', 'center').css('padding-left', '0px');  
   }
 
-  var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
+  var quote = "\"Hold on! quotey needs to load...\" - luckysharms"; // find the location on the page where the quote will go
   var quote_div = x.find('.quote-text');
   //Set loading quote
   quote_div.html(quote); // Default, placeholder quote.
@@ -361,7 +361,7 @@ App.populator('Love', function (page) {
     x.find('.app-title.main').css('text-align', 'center').css('padding-left', '0px');
   }
 
-  var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
+  var quote = "\"Initiating quotey loading sequence...\" - luckysharms"; // find the location on the page where the quote will go
   var quote_div = x.find('.quote-text');
   //Set loading quote
   quote_div.html(quote); // Default, placeholder quote.
@@ -416,7 +416,7 @@ App.populator('Friendship', function (page) {
     x.find('.app-title.main').css('text-align', 'center').css('padding-left', '0px');
   }
 
-  var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
+  var quote = "\"Load quotey loooooad...\" - luckysharms"; // find the location on the page where the quote will go
   var quote_div = x.find('.quote-text');
   //Set loading quote
   quote_div.html(quote); // Default, placeholder quote.
@@ -472,7 +472,7 @@ App.populator('QuotesDaddy', function (page) {
     x.find('.app-title.main').css('text-align', 'center').css('padding-left', '0px');
   }
 
-  var quote = "\"And on the eleventh day <b>quotey</b> was loading...\" - luckysharms"; // find the location on the page where the quote will go
+  var quote = "\"Yay! quotey is loading :)...\" - luckysharms"; // find the location on the page where the quote will go
   var quote_div = x.find('.quote-text');
   //Set loading quote
   quote_div.html(quote); // Default, placeholder quote.
